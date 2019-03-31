@@ -32,16 +32,18 @@
             this.btnRent = new System.Windows.Forms.Button();
             this.btnBuy = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnAdminPanel = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnLogOut
             // 
             this.btnLogOut.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogOut.ForeColor = System.Drawing.Color.Black;
-            this.btnLogOut.Location = new System.Drawing.Point(879, 10);
-            this.btnLogOut.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLogOut.Location = new System.Drawing.Point(1172, 12);
+            this.btnLogOut.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Size = new System.Drawing.Size(111, 25);
+            this.btnLogOut.Size = new System.Drawing.Size(148, 31);
             this.btnLogOut.TabIndex = 0;
             this.btnLogOut.Text = "Log Out";
             this.btnLogOut.UseVisualStyleBackColor = true;
@@ -51,10 +53,10 @@
             // 
             this.btnRent.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnRent.ForeColor = System.Drawing.Color.Black;
-            this.btnRent.Location = new System.Drawing.Point(268, 130);
-            this.btnRent.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRent.Location = new System.Drawing.Point(357, 160);
+            this.btnRent.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRent.Name = "btnRent";
-            this.btnRent.Size = new System.Drawing.Size(197, 128);
+            this.btnRent.Size = new System.Drawing.Size(263, 158);
             this.btnRent.TabIndex = 1;
             this.btnRent.Text = "Rent";
             this.btnRent.UseVisualStyleBackColor = true;
@@ -64,10 +66,10 @@
             // 
             this.btnBuy.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnBuy.ForeColor = System.Drawing.Color.Black;
-            this.btnBuy.Location = new System.Drawing.Point(532, 130);
-            this.btnBuy.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBuy.Location = new System.Drawing.Point(709, 160);
+            this.btnBuy.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBuy.Name = "btnBuy";
-            this.btnBuy.Size = new System.Drawing.Size(184, 129);
+            this.btnBuy.Size = new System.Drawing.Size(245, 159);
             this.btnBuy.TabIndex = 2;
             this.btnBuy.Text = "Buy";
             this.btnBuy.UseVisualStyleBackColor = true;
@@ -79,24 +81,50 @@
             this.label1.BackColor = System.Drawing.Color.Gray;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(11, 533);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(15, 656);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(215, 25);
+            this.label1.Size = new System.Drawing.Size(273, 29);
             this.label1.TabIndex = 3;
             this.label1.Text = "Create new AutoHouse";
             this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
+            // button1
+            // 
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Location = new System.Drawing.Point(357, 381);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(263, 158);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "My Auto House";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnAdminPanel
+            // 
+            this.btnAdminPanel.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnAdminPanel.ForeColor = System.Drawing.Color.Black;
+            this.btnAdminPanel.Location = new System.Drawing.Point(709, 380);
+            this.btnAdminPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAdminPanel.Name = "btnAdminPanel";
+            this.btnAdminPanel.Size = new System.Drawing.Size(245, 159);
+            this.btnAdminPanel.TabIndex = 5;
+            this.btnAdminPanel.Text = "Admin Panel";
+            this.btnAdminPanel.UseVisualStyleBackColor = true;
+            this.btnAdminPanel.Click += new System.EventHandler(this.btnAdminPanel_Click);
+            // 
             // Form2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(999, 567);
+            this.ClientSize = new System.Drawing.Size(1332, 698);
+            this.Controls.Add(this.btnAdminPanel);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnBuy);
             this.Controls.Add(this.btnRent);
             this.Controls.Add(this.btnLogOut);
             this.ForeColor = System.Drawing.Color.Red;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
             this.ResumeLayout(false);
@@ -110,5 +138,7 @@
         private System.Windows.Forms.Button btnRent;
         private System.Windows.Forms.Button btnBuy;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAdminPanel;
     }
 }

@@ -6,24 +6,45 @@ using System.Threading.Tasks;
 
 namespace AutoHouse
 {
-    class AutoHouse
+    public class AutoHouse
     {
+        private int id;
         private  string  name;
+        private string adres;
+        private int idOwner;
         private string   town;
-        private List<Car> cars=new List<Car>();
-        
-        public AutoHouse(string name,string town,List<Car> auto)
+        private List<Car> carsForSell = new List<Car>();
+        private List<Car> rentaCars = new List<Car>();
+
+
+        public AutoHouse(int id, string name,string adres, int idOwner,string town,List<Car> carsForSell, List<Car> rentaCars)
         {
-            this.name = name;
-            this.town = town;
-            this.cars = auto;
+            this.Id = id;
+            this.Name = name;
+            this.Adres=adres;
+            this.IdOwner = idOwner;
+            this.Town = town;
+            this.CarsForSell = carsForSell;
+            this.RentaCars = rentaCars;
         }
-        public List<Car> Cars
+        
+        public int Id
         {
-            get { return cars; }
-            set { cars = value; }
+            get { return this.id; }
+            set { this.id = value; }
         }
 
+        public string Adres
+        {
+            get { return this.adres; }
+            set { this.adres = value; }
+        }
+
+        public int IdOwner
+        {
+            get { return this.idOwner; }
+            set { this.idOwner = value; }
+        }
 
         public string Town
         {
@@ -37,5 +58,15 @@ namespace AutoHouse
             set { name = value; }
         }
 
+        public List<Car> CarsForSell
+        {
+            get { return this.carsForSell; }
+            set { this.carsForSell = value; }
+        }
+        public List<Car> RentaCars
+        {
+            get { return this.rentaCars; }
+            set { this.rentaCars = value; }
+        }
     }
 }

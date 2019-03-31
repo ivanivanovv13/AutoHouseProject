@@ -6,28 +6,31 @@ using System.Threading.Tasks;
 
 namespace AutoHouse
 {
-    class Users
+    public class Users
     {
         private string  username;
         private string password;
-        private List<AutoHouse> aH=new List<AutoHouse>();
+        private int id;
+        
         public Users()
         {
 
         }
-        
-        public Users(string username,string password,List<AutoHouse> auto)
+
+        public Users(int id ,string username, string password )
         {
+            this.id = id;
             this.username = username;
             this.password = password;
-            this.aH = auto;
+            
 
         }
-        public List<AutoHouse> AH
+        public int Id
         {
-            get { return this.aH; }
-            set { this.aH = value; }
+            get { return this.id; }
+            set { this.id = value; }
         }
+        
 
         public string Password
         {

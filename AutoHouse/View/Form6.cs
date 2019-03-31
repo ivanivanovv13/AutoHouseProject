@@ -163,6 +163,7 @@ namespace AutoHouse
         {
             Form frm = new View.Form9(users,AutoHouse);
             frm.Show();
+            this.Hide();
         }
     }
 }

@@ -38,76 +38,91 @@
             // 
             // btnBack
             // 
+            this.btnBack.BackColor = System.Drawing.Color.LightSlateGray;
             this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnBack.Location = new System.Drawing.Point(1112, 12);
+            this.btnBack.Location = new System.Drawing.Point(834, 10);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(208, 66);
+            this.btnBack.Size = new System.Drawing.Size(156, 54);
             this.btnBack.TabIndex = 18;
             this.btnBack.Text = "GoBack";
-            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // btnRemoveCar
             // 
-            this.btnRemoveCar.Location = new System.Drawing.Point(942, 260);
+            this.btnRemoveCar.BackColor = System.Drawing.Color.LightSlateGray;
+            this.btnRemoveCar.Location = new System.Drawing.Point(706, 211);
+            this.btnRemoveCar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnRemoveCar.Name = "btnRemoveCar";
-            this.btnRemoveCar.Size = new System.Drawing.Size(263, 158);
+            this.btnRemoveCar.Size = new System.Drawing.Size(197, 128);
             this.btnRemoveCar.TabIndex = 17;
             this.btnRemoveCar.Text = "Remove Car";
-            this.btnRemoveCar.UseVisualStyleBackColor = true;
+            this.btnRemoveCar.UseVisualStyleBackColor = false;
             this.btnRemoveCar.Click += new System.EventHandler(this.btnRemoveCar_Click);
             // 
             // btnAddCar
             // 
-            this.btnAddCar.Location = new System.Drawing.Point(631, 260);
+            this.btnAddCar.BackColor = System.Drawing.Color.LightSlateGray;
+            this.btnAddCar.Location = new System.Drawing.Point(473, 211);
+            this.btnAddCar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAddCar.Name = "btnAddCar";
-            this.btnAddCar.Size = new System.Drawing.Size(263, 158);
+            this.btnAddCar.Size = new System.Drawing.Size(197, 128);
             this.btnAddCar.TabIndex = 16;
             this.btnAddCar.Text = "Add Car";
-            this.btnAddCar.UseVisualStyleBackColor = true;
+            this.btnAddCar.UseVisualStyleBackColor = false;
             this.btnAddCar.Click += new System.EventHandler(this.btnAddCar_Click);
             // 
             // btnStatistic
             // 
-            this.btnStatistic.Location = new System.Drawing.Point(287, 260);
+            this.btnStatistic.BackColor = System.Drawing.Color.LightSlateGray;
+            this.btnStatistic.Location = new System.Drawing.Point(215, 211);
+            this.btnStatistic.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnStatistic.Name = "btnStatistic";
-            this.btnStatistic.Size = new System.Drawing.Size(263, 158);
+            this.btnStatistic.Size = new System.Drawing.Size(197, 128);
             this.btnStatistic.TabIndex = 15;
             this.btnStatistic.Text = "Statistic";
-            this.btnStatistic.UseVisualStyleBackColor = true;
+            this.btnStatistic.UseVisualStyleBackColor = false;
             this.btnStatistic.Click += new System.EventHandler(this.btnStatistic_Click);
             // 
             // btnRemoveAH
             // 
-            this.btnRemoveAH.Location = new System.Drawing.Point(782, 476);
+            this.btnRemoveAH.BackColor = System.Drawing.Color.LightSlateGray;
+            this.btnRemoveAH.Location = new System.Drawing.Point(586, 387);
+            this.btnRemoveAH.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnRemoveAH.Name = "btnRemoveAH";
-            this.btnRemoveAH.Size = new System.Drawing.Size(263, 158);
+            this.btnRemoveAH.Size = new System.Drawing.Size(197, 128);
             this.btnRemoveAH.TabIndex = 19;
             this.btnRemoveAH.Text = "Remove AutoHouse";
-            this.btnRemoveAH.UseVisualStyleBackColor = true;
+            this.btnRemoveAH.UseVisualStyleBackColor = false;
             this.btnRemoveAH.Click += new System.EventHandler(this.btnRemoveAH_Click);
             // 
             // btnRemoveUser
             // 
-            this.btnRemoveUser.Location = new System.Drawing.Point(465, 476);
+            this.btnRemoveUser.BackColor = System.Drawing.Color.LightSlateGray;
+            this.btnRemoveUser.Location = new System.Drawing.Point(349, 387);
+            this.btnRemoveUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnRemoveUser.Name = "btnRemoveUser";
-            this.btnRemoveUser.Size = new System.Drawing.Size(263, 158);
+            this.btnRemoveUser.Size = new System.Drawing.Size(197, 128);
             this.btnRemoveUser.TabIndex = 20;
             this.btnRemoveUser.Text = "Remove User";
-            this.btnRemoveUser.UseVisualStyleBackColor = true;
+            this.btnRemoveUser.UseVisualStyleBackColor = false;
             this.btnRemoveUser.Click += new System.EventHandler(this.btnRemoveUser_Click);
             // 
             // Form11
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1332, 698);
+            this.BackColor = System.Drawing.Color.RoyalBlue;
+            this.ClientSize = new System.Drawing.Size(999, 567);
             this.Controls.Add(this.btnRemoveUser);
             this.Controls.Add(this.btnRemoveAH);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnRemoveCar);
             this.Controls.Add(this.btnAddCar);
             this.Controls.Add(this.btnStatistic);
+            this.ForeColor = System.Drawing.Color.Black;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form11";
             this.Text = "Admin Panel";
             this.ResumeLayout(false);

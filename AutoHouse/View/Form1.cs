@@ -14,8 +14,9 @@ namespace AutoHouse
     public partial class Form1 : Form
     {
        Controller test = new Controller();
-        
-      
+        MySqlConnection connection;
+
+
 
         public Form1()
         {
@@ -42,25 +43,25 @@ namespace AutoHouse
             }
             else
             {
-<<<<<<< HEAD
+
                 bool flag = true;
-                MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
-                try
-=======
                 MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
-                connection.Open();
-                using (connection)
->>>>>>> fb07346e3a0f6988e10517e6f2f495128092df6f
+                try
                 {
+                    connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
                     connection.Open();
                     using (connection)
                     {
-                        MySqlCommand cmd = new MySqlCommand("INSERT INTO users (user,pass) VALUES (@user,@pass)", connection);
-                        cmd.Parameters.AddWithValue("@user", textBox1.Text);
-                        cmd.Parameters.AddWithValue("@pass", textBox2.Text);
-                        cmd.ExecuteNonQuery();
+                        connection.Open();
+                        using (connection)
+                        {
+                            MySqlCommand cmd = new MySqlCommand("INSERT INTO users (user,pass) VALUES (@user,@pass)", connection);
+                            cmd.Parameters.AddWithValue("@user", textBox1.Text);
+                            cmd.Parameters.AddWithValue("@pass", textBox2.Text);
+                            cmd.ExecuteNonQuery();
+                        }
+                        connection.Close();
                     }
-                    connection.Close();
                 }
                 catch (Exception)
                 {

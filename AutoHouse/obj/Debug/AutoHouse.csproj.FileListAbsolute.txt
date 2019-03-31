@@ -102,3 +102,15 @@ C:\Users\User\Documents\GitHub\AutoHouseProject\AutoHouse\obj\Debug\AutoHouse.cs
 C:\Users\User\Documents\GitHub\AutoHouseProject\AutoHouse\obj\Debug\AutoHouse.exe
 C:\Users\User\Documents\GitHub\AutoHouseProject\AutoHouse\obj\Debug\AutoHouse.pdb
 >>>>>>> fb07346e3a0f6988e10517e6f2f495128092df6f
+C:\Users\User\Desktop\AutoHouse\AutoHouse\obj\Debug\AutoHouse.View.Form10.resources
+C:\Users\User\Desktop\AutoHouse\AutoHouse\obj\Debug\AutoHouse.View.Form11.resources
+C:\Users\User\Desktop\AutoHouse\AutoHouse\obj\Debug\AutoHouse.View.Form12.resources
+C:\Users\User\Desktop\AutoHouse\AutoHouse\obj\Debug\AutoHouse.View.Form13.resources
+C:\Users\User\Desktop\AutoHouse\AutoHouse\obj\Debug\AutoHouse.View.Form14.resources
+C:\Users\User\Desktop\AutoHouse\AutoHouse\obj\Debug\AutoHouse.View.Form15.resources
+C:\Users\User\Desktop\AutoHouse\AutoHouse\obj\Debug\AutoHouse.View.Form16.resources
+C:\Users\User\Desktop\AutoHouse\AutoHouse\obj\Debug\AutoHouse.View.Form17.resources
+C:\Users\User\Desktop\AutoHouse\AutoHouse\obj\Debug\AutoHouse.Form6.resources
+C:\Users\User\Desktop\AutoHouse\AutoHouse\obj\Debug\AutoHouse.View.Form7.resources
+C:\Users\User\Desktop\AutoHouse\AutoHouse\obj\Debug\AutoHouse.View.Form8.resources
+C:\Users\User\Desktop\AutoHouse\AutoHouse\obj\Debug\AutoHouse.View.Form9.resources

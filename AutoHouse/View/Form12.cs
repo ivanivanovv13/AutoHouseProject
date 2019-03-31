@@ -45,7 +45,7 @@ namespace AutoHouse.View
             this.car = car;
             this.autoHouses = autoHouses;
             images.Add(car.Pic);
-            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
+            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
             using (connection)
             {
                 connection.Open();
@@ -109,7 +109,7 @@ namespace AutoHouse.View
         {
             try
             {
-                MySqlConnection connectionStatistic = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
+                MySqlConnection connectionStatistic = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
                 connectionStatistic.Open();
                 using (connectionStatistic)
                 {

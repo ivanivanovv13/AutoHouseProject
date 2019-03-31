@@ -36,54 +36,68 @@
             // 
             // btnStatistic
             // 
-            this.btnStatistic.Location = new System.Drawing.Point(287, 260);
+            this.btnStatistic.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnStatistic.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnStatistic.Location = new System.Drawing.Point(88, 138);
+            this.btnStatistic.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnStatistic.Name = "btnStatistic";
-            this.btnStatistic.Size = new System.Drawing.Size(263, 158);
+            this.btnStatistic.Size = new System.Drawing.Size(263, 208);
             this.btnStatistic.TabIndex = 1;
             this.btnStatistic.Text = "Statistic";
-            this.btnStatistic.UseVisualStyleBackColor = true;
+            this.btnStatistic.UseVisualStyleBackColor = false;
             this.btnStatistic.Click += new System.EventHandler(this.btnStatistic_Click);
             // 
             // btnAddCar
             // 
-            this.btnAddCar.Location = new System.Drawing.Point(631, 260);
+            this.btnAddCar.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnAddCar.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnAddCar.Location = new System.Drawing.Point(392, 138);
+            this.btnAddCar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAddCar.Name = "btnAddCar";
-            this.btnAddCar.Size = new System.Drawing.Size(263, 158);
+            this.btnAddCar.Size = new System.Drawing.Size(263, 208);
             this.btnAddCar.TabIndex = 2;
             this.btnAddCar.Text = "Add Car";
-            this.btnAddCar.UseVisualStyleBackColor = true;
+            this.btnAddCar.UseVisualStyleBackColor = false;
             this.btnAddCar.Click += new System.EventHandler(this.btnAddCar_Click);
             // 
             // btnRemoveCar
             // 
-            this.btnRemoveCar.Location = new System.Drawing.Point(942, 260);
+            this.btnRemoveCar.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnRemoveCar.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnRemoveCar.Location = new System.Drawing.Point(702, 138);
+            this.btnRemoveCar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnRemoveCar.Name = "btnRemoveCar";
-            this.btnRemoveCar.Size = new System.Drawing.Size(263, 158);
+            this.btnRemoveCar.Size = new System.Drawing.Size(263, 208);
             this.btnRemoveCar.TabIndex = 3;
             this.btnRemoveCar.Text = "Remove Car";
-            this.btnRemoveCar.UseVisualStyleBackColor = true;
+            this.btnRemoveCar.UseVisualStyleBackColor = false;
             this.btnRemoveCar.Click += new System.EventHandler(this.btnRemoveCar_Click);
             // 
             // btnBack
             // 
-            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnBack.Location = new System.Drawing.Point(1112, 12);
+            this.btnBack.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnBack.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 13.8F);
+            this.btnBack.Location = new System.Drawing.Point(933, 13);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(208, 66);
+            this.btnBack.Size = new System.Drawing.Size(128, 51);
             this.btnBack.TabIndex = 14;
             this.btnBack.Text = "GoBack";
-            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // Form6
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1332, 698);
+            this.BackColor = System.Drawing.Color.RoyalBlue;
+            this.ClientSize = new System.Drawing.Size(1073, 495);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnRemoveCar);
             this.Controls.Add(this.btnAddCar);
             this.Controls.Add(this.btnStatistic);
+            this.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Form6";
             this.Text = "Form6";
             this.Load += new System.EventHandler(this.Form6_Load);

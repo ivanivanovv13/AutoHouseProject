@@ -94,7 +94,7 @@ namespace AutoHouse.View
 
         private void CantRenta()
         {
-            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
+            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
             try
             {
                 
@@ -302,6 +302,16 @@ namespace AutoHouse.View
         }
 
         private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
         {
 
         }

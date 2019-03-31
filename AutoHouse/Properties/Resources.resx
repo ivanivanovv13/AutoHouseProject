@@ -118,11 +118,53 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="kisspng-password-computer-icons-clip-art-coheed-and-cambria-symbol-5b5e339bd5c7a2.0396166715329002518757" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\kisspng-password-computer-icons-clip-art-coheed-and-cambria-symbol-5b5e339bd5c7a2.0396166715329002518757.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="blue-blur-background-video-animation_eyul8gun__F0000" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\blue-blur-background-video-animation_eyul8gun__F0000.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="password-logo-png-4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\password-logo-png-4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="images2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="username-logo-png-3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\username-logo-png-3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="depositphotos_189546066-stock-video-blurred-background-car-driving-road" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\depositphotos_189546066-stock-video-blurred-background-car-driving-road.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="rent-a-car-background-8" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\rent-a-car-background-8.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="maxresdefault" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\maxresdefault.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="images1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="images3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="two-color-background-grey-spycob-lp-1200-blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\two-color-background-grey-spycob-lp-1200-blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="86" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\86.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="username-logo-png-31" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\username-logo-png-31.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1993-Toyota-Supra-from-The-Fast-and-the-Furious-front-three-quarter-01" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1993-Toyota-Supra-from-The-Fast-and-the-Furious-front-three-quarter-01.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nazad" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nazad.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="generictwocolumn_f5a.resizeViewPort.noScale" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\generictwocolumn_f5a.resizeViewPort.noScale.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="two-color-background-grey-spycob-lp-1200-blue1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\two-color-background-grey-spycob-lp-1200-blue1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="bf0fca9f7801e840f24d6d77e7ea8496" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bf0fca9f7801e840f24d6d77e7ea8496.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -130,58 +172,28 @@
   <data name="2C3CDXBG7KH550092-1c" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\2C3CDXBG7KH550092-1c.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="maxresdefault" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\maxresdefault.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="86" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\86.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="1993-Toyota-Supra-from-The-Fast-and-the-Furious-front-three-quarter-01" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1993-Toyota-Supra-from-The-Fast-and-the-Furious-front-three-quarter-01.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="username-logo-png-31" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\username-logo-png-31.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="password-logo-png-4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\password-logo-png-4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="2018-BMW-X6-01" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\2018-BMW-X6-01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="nazad" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\nazad.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="two-color-background-grey-spycob-lp-1200-blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\two-color-background-grey-spycob-lp-1200-blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cleveland-auto-show-car-logo-png-25" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cleveland-auto-show-car-logo-png-25.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="username-logo-png-3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\username-logo-png-3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="download" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\download.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="generictwocolumn_f5a.resizeViewPort.noScale" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\generictwocolumn_f5a.resizeViewPort.noScale.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="kisspng-car-wash-madrazi-car-spa-logo-auto-detailing-paint-wash-5adfb8ec181198.8339727015246113080986" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\kisspng-car-wash-madrazi-car-spa-logo-auto-detailing-paint-wash-5adfb8ec181198.8339727015246113080986.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="blue-blur-background-video-animation_eyul8gun__F0000" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\blue-blur-background-video-animation_eyul8gun__F0000.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="cleveland-auto-show-car-logo-png-25" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cleveland-auto-show-car-logo-png-25.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="rent-a-car-background-8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rent-a-car-background-8.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="79585b7a1a42490" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\79585b7a1a42490.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="kisspng-password-computer-icons-clip-art-coheed-and-cambria-symbol-5b5e339bd5c7a2.0396166715329002518757" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\kisspng-password-computer-icons-clip-art-coheed-and-cambria-symbol-5b5e339bd5c7a2.0396166715329002518757.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="images" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\images.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="two-color-background-grey-spycob-lp-1200-blue1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\two-color-background-grey-spycob-lp-1200-blue1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="download" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\download.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="350998-website-background-1920x1200-for-lockscreen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\350998-website-background-1920x1200-for-lockscreen.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

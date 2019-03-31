@@ -131,7 +131,7 @@ namespace AutoHouse.View
                 {
                     labelsCars[n].Visible = true;
                     pictureBoxesCars[n].Visible = true;
-                    labelsCars[n].Text = autoHouse.CarsForSell[i].Brand + " " + autoHouse.CarsForSell[i].Model + " " + autoHouse.CarsForSell[i].Color + " " + autoHouse.CarsForSell[i].Year + " " + autoHouse.CarsForSell[i].Probeg + " " + autoHouse.CarsForSell[i].Price;
+                    labelsCars[n].Text = autoHouse.CarsForSell[i].Brand + " " + autoHouse.CarsForSell[i].Model;
                     pictureBoxesCars[n].Image = autoHouse.CarsForSell[i].Pic;
                 }
                 else
@@ -304,6 +304,16 @@ namespace AutoHouse.View
             Form fm = new Form10(user, autoHouses[curentAhID], autoHouses[curentAhID].CarsForSell[startCar + 4], autoHouses, curentAhID, startCar, startAH);
             fm.Show();
             this.Hide();
+        }
+
+        private void lblChose_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

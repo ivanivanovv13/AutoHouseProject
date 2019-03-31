@@ -69,3 +69,9 @@ C:\Users\stili\Desktop\autohouse\AutoHouse\obj\Debug\AutoHouse.View.Form8.resour
 C:\Users\stili\Desktop\autohouse\AutoHouse\obj\Debug\AutoHouse.View.Form9.resources
 C:\Users\stili\Desktop\autohouse\AutoHouse\obj\Debug\AutoHouse.View.Form10.resources
 C:\Users\stili\Desktop\autohouse\AutoHouse\obj\Debug\AutoHouse.View.Form11.resources
+C:\Users\stili\Desktop\autohouse\AutoHouse\obj\Debug\AutoHouse.View.Form12.resources
+C:\Users\stili\Desktop\autohouse\AutoHouse\obj\Debug\AutoHouse.View.Form13.resources
+C:\Users\stili\Desktop\autohouse\AutoHouse\obj\Debug\AutoHouse.View.Form15.resources
+C:\Users\stili\Desktop\autohouse\AutoHouse\obj\Debug\AutoHouse.View.Form16.resources
+C:\Users\stili\Desktop\autohouse\AutoHouse\obj\Debug\AutoHouse.View.Form17.resources
+C:\Users\stili\Desktop\autohouse\AutoHouse\obj\Debug\AutoHouse.View.Form14.resources

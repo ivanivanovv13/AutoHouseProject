@@ -62,6 +62,42 @@
     <Compile Include="View\Form11.Designer.cs">
       <DependentUpon>Form11.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Form12.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Form12.Designer.cs">
+      <DependentUpon>Form12.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Form13.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Form13.Designer.cs">
+      <DependentUpon>Form13.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Form14.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Form14.Designer.cs">
+      <DependentUpon>Form14.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Form15.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Form15.Designer.cs">
+      <DependentUpon>Form15.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Form16.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Form16.Designer.cs">
+      <DependentUpon>Form16.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Form17.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Form17.Designer.cs">
+      <DependentUpon>Form17.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Form6.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,6 +175,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Form11.resx">
       <DependentUpon>Form11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Form12.resx">
+      <DependentUpon>Form12.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Form13.resx">
+      <DependentUpon>Form13.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Form14.resx">
+      <DependentUpon>Form14.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Form15.resx">
+      <DependentUpon>Form15.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Form16.resx">
+      <DependentUpon>Form16.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Form17.resx">
+      <DependentUpon>Form17.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>

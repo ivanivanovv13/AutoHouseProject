@@ -61,6 +61,8 @@ namespace AutoHouse.View
             this.startCar = startCar;
             this.startAH = startAH;
             this.autoHousesRenta = autoHouse;
+            
+
 
             flag = true;
 
@@ -303,7 +305,9 @@ namespace AutoHouse.View
 
         private void label2_Click(object sender, EventArgs e)
         {
-
+            Form fm = new Form12(user,autoHouses[curentAhID],autoHouses[curentAhID].RentaCars[startCar],autoHouses,curentAhID,startCar,startAH, dateTimePicker1.Value.ToString("yyyy-MM-dd"), dateTimePicker2.Value.ToString("yyyy-MM-dd"),(dateTimePicker2.Value-dateTimePicker1.Value).Days);
+            fm.Show();
+            this.Hide();
         }
     }
 }

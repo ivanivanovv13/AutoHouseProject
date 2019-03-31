@@ -42,64 +42,87 @@ namespace AutoHouse
             }
             else
             {
+                bool flag = true;
                 MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
-                connection.Open();
-                using (connection)
+                try
                 {
-                    MySqlCommand cmd = new MySqlCommand("INSERT INTO users (user,pass) VALUES (@user,@pass)", connection);
-                    cmd.Parameters.AddWithValue("@user", textBox1.Text);
-                    cmd.Parameters.AddWithValue("@pass", textBox2.Text);
-                    cmd.ExecuteNonQuery();
-                }
-                connection.Close();
-
-                List<int> idAH = new List<int>();
-                
-                connection.Open();
-                using (connection)
-                {
-                    MySqlCommand cmd = new MySqlCommand("select autohouses.id	from autohouses;", connection);
-                    MySqlDataReader reader = cmd.ExecuteReader();
-                    while(reader.Read())
+                    connection.Open();
+                    using (connection)
                     {
-                        idAH.Add(int.Parse(reader["id"].ToString()));
-                    }
-                    
-                }
-                connection.Close();
-
-                int idUser=0;
-                connection.Open();
-                using (connection)
-                {
-                    MySqlCommand cmd = new MySqlCommand("select users.id from users where users.user='" + textBox1.Text + "';", connection);
-                    MySqlDataReader reader = cmd.ExecuteReader();
-                    if(reader.Read())
-                    {
-                        idUser = int.Parse(reader["id"].ToString());
-                    }
-
-                }
-                connection.Close();
-
-
-
-
-                connection.Open();
-                using (connection)
-                {
-                    for (int i = 0; i < idAH.Count; i++)
-                    {
-                        MySqlCommand cmd = new MySqlCommand("insert into users_ah(id_users,id_ah) values(@IdUser,@IdAH);", connection);
-                        cmd.Parameters.AddWithValue("@IdUser", idUser);
-                        cmd.Parameters.AddWithValue("@IdAH", idAH[i]);
+                        MySqlCommand cmd = new MySqlCommand("INSERT INTO users (user,pass) VALUES (@user,@pass)", connection);
+                        cmd.Parameters.AddWithValue("@user", textBox1.Text);
+                        cmd.Parameters.AddWithValue("@pass", textBox2.Text);
                         cmd.ExecuteNonQuery();
-                    }                    
+                    }
+                    connection.Close();
                 }
-                connection.Close();
-                MessageBox.Show("You register successfully");
-               
-                
+                catch (Exception)
+                {
+                    MessageBox.Show("Imeto veche e izpolzvano");
+                    flag = false;
+                }
+                if(flag)
+                {
+                    List<int> idAH = new List<int>();
+
+                    connection.Open();
+                    using (connection)
+                    {
+                        MySqlCommand cmd = new MySqlCommand("select autohouses.id	from autohouses where autohouses.id_owner!='NULL' ;", connection);
+                        MySqlDataReader reader = cmd.ExecuteReader();
+                        while (reader.Read())
+                        {
+                            idAH.Add(int.Parse(reader["id"].ToString()));
+                        }
+
+                    }
+                    connection.Close();
+
+                    int idUser = 0;
+                    connection.Open();
+                    using (connection)
+                    {
+                        MySqlCommand cmd = new MySqlCommand("select users.id from users where users.user='" + textBox1.Text + "';", connection);
+                        MySqlDataReader reader = cmd.ExecuteReader();
+                        if (reader.Read())
+                        {
+                            idUser = int.Parse(reader["id"].ToString());
+                        }
+
+                    }
+                    connection.Close();
+
+
+                    connection.Open();
+                    using (connection)
+                    {
+                        MySqlCommand cmd = new MySqlCommand("insert into permission(permission.id_user,permission.addAH,permission.delAH,permission.addUser,permission.delUser,permission.viewStatistic,permission.addCars,permission.delCars,permission.buyCar,permission.rentCar) values(@IdUser,'N','N','N','N','N','N','N','Y','Y');", connection);
+                        cmd.Parameters.AddWithValue("@IdUser", idUser);
+                        cmd.ExecuteNonQuery();
+
+                    }
+                    connection.Close();
+
+
+
+                    connection.Open();
+                    using (connection)
+                    {
+                        for (int i = 0; i < idAH.Count; i++)
+                        {
+                            MySqlCommand cmd = new MySqlCommand("insert into users_ah(id_users,id_ah) values(@IdUser,@IdAH);", connection);
+                            cmd.Parameters.AddWithValue("@IdUser", idUser);
+                            cmd.Parameters.AddWithValue("@IdAH", idAH[i]);
+                            cmd.ExecuteNonQuery();
+                        }
+                    }
+                    connection.Close();
+                    MessageBox.Show("You register successfully");
+
+                }
+
+
+
             }
         
         }

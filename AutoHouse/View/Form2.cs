@@ -219,7 +219,9 @@ namespace AutoHouse
 
         private void btnAdminPanel_Click(object sender, EventArgs e)
         {
-
+            Form fm = new View.Form11(users);
+            fm.Show();
+            this.Hide();
         }
     }
 }

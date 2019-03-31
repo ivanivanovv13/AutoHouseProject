@@ -297,5 +297,17 @@
   <ItemGroup>
     <None Include="Resources\two-color-background-grey-spycob-lp-1200-blue1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\350998-website-background-1920x1200-for-lockscreen.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

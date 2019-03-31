@@ -28,15 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBoxImage1 = new System.Windows.Forms.PictureBox();
-            this.pictureBoxZoomImage = new System.Windows.Forms.PictureBox();
-            this.pictureBoxImage2 = new System.Windows.Forms.PictureBox();
-            this.pictureBoxImage3 = new System.Windows.Forms.PictureBox();
-            this.pictureBoxImage4 = new System.Windows.Forms.PictureBox();
-            this.pictureBoxImage8 = new System.Windows.Forms.PictureBox();
-            this.pictureBoxImage7 = new System.Windows.Forms.PictureBox();
-            this.pictureBoxImage6 = new System.Windows.Forms.PictureBox();
-            this.pictureBoxImage5 = new System.Windows.Forms.PictureBox();
             this.btnBuy = new System.Windows.Forms.Button();
             this.lblBrand = new System.Windows.Forms.Label();
             this.lblModel = new System.Windows.Forms.Label();
@@ -45,68 +36,119 @@
             this.lblProbeg = new System.Windows.Forms.Label();
             this.lblMoney = new System.Windows.Forms.Label();
             this.btnGoBack = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxZoomImage)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage4)).BeginInit();
+            this.pictureBoxImage8 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxImage7 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxImage6 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxImage5 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxImage4 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxImage3 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxImage2 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxImage1 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxZoomImage = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxZoomImage)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBoxImage1
+            // btnBuy
             // 
-            this.pictureBoxImage1.Location = new System.Drawing.Point(12, 494);
-            this.pictureBoxImage1.Name = "pictureBoxImage1";
-            this.pictureBoxImage1.Size = new System.Drawing.Size(100, 100);
-            this.pictureBoxImage1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxImage1.TabIndex = 1;
-            this.pictureBoxImage1.TabStop = false;
-            this.pictureBoxImage1.Click += new System.EventHandler(this.pictureBoxImage1_Click);
+            this.btnBuy.BackColor = System.Drawing.Color.LightSlateGray;
+            this.btnBuy.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 13.8F);
+            this.btnBuy.Location = new System.Drawing.Point(760, 643);
+            this.btnBuy.Name = "btnBuy";
+            this.btnBuy.Size = new System.Drawing.Size(147, 57);
+            this.btnBuy.TabIndex = 9;
+            this.btnBuy.Text = "Buy";
+            this.btnBuy.UseVisualStyleBackColor = false;
+            this.btnBuy.Click += new System.EventHandler(this.btnBuy_Click);
             // 
-            // pictureBoxZoomImage
+            // lblBrand
             // 
-            this.pictureBoxZoomImage.Location = new System.Drawing.Point(12, 31);
-            this.pictureBoxZoomImage.Name = "pictureBoxZoomImage";
-            this.pictureBoxZoomImage.Size = new System.Drawing.Size(418, 418);
-            this.pictureBoxZoomImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxZoomImage.TabIndex = 0;
-            this.pictureBoxZoomImage.TabStop = false;
+            this.lblBrand.AutoSize = true;
+            this.lblBrand.BackColor = System.Drawing.Color.Transparent;
+            this.lblBrand.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 13.8F);
+            this.lblBrand.Location = new System.Drawing.Point(496, 31);
+            this.lblBrand.Name = "lblBrand";
+            this.lblBrand.Size = new System.Drawing.Size(72, 28);
+            this.lblBrand.TabIndex = 10;
+            this.lblBrand.Text = "Brand:";
             // 
-            // pictureBoxImage2
+            // lblModel
             // 
-            this.pictureBoxImage2.Location = new System.Drawing.Point(118, 494);
-            this.pictureBoxImage2.Name = "pictureBoxImage2";
-            this.pictureBoxImage2.Size = new System.Drawing.Size(100, 100);
-            this.pictureBoxImage2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxImage2.TabIndex = 2;
-            this.pictureBoxImage2.TabStop = false;
-            this.pictureBoxImage2.Click += new System.EventHandler(this.pictureBoxImage2_Click);
+            this.lblModel.AutoSize = true;
+            this.lblModel.BackColor = System.Drawing.Color.Transparent;
+            this.lblModel.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 13.8F);
+            this.lblModel.Location = new System.Drawing.Point(496, 76);
+            this.lblModel.Name = "lblModel";
+            this.lblModel.Size = new System.Drawing.Size(81, 28);
+            this.lblModel.TabIndex = 11;
+            this.lblModel.Text = "Model: ";
             // 
-            // pictureBoxImage3
+            // lblColor
             // 
-            this.pictureBoxImage3.Location = new System.Drawing.Point(224, 494);
-            this.pictureBoxImage3.Name = "pictureBoxImage3";
-            this.pictureBoxImage3.Size = new System.Drawing.Size(100, 100);
-            this.pictureBoxImage3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxImage3.TabIndex = 3;
-            this.pictureBoxImage3.TabStop = false;
-            this.pictureBoxImage3.Click += new System.EventHandler(this.pictureBoxImage3_Click);
+            this.lblColor.AutoSize = true;
+            this.lblColor.BackColor = System.Drawing.Color.Transparent;
+            this.lblColor.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 13.8F);
+            this.lblColor.Location = new System.Drawing.Point(496, 121);
+            this.lblColor.Name = "lblColor";
+            this.lblColor.Size = new System.Drawing.Size(66, 28);
+            this.lblColor.TabIndex = 12;
+            this.lblColor.Text = "Color:";
             // 
-            // pictureBoxImage4
+            // lblYear
             // 
-            this.pictureBoxImage4.Location = new System.Drawing.Point(330, 494);
-            this.pictureBoxImage4.Name = "pictureBoxImage4";
-            this.pictureBoxImage4.Size = new System.Drawing.Size(100, 100);
-            this.pictureBoxImage4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxImage4.TabIndex = 4;
-            this.pictureBoxImage4.TabStop = false;
-            this.pictureBoxImage4.Click += new System.EventHandler(this.pictureBoxImage4_Click);
+            this.lblYear.AutoSize = true;
+            this.lblYear.BackColor = System.Drawing.Color.Transparent;
+            this.lblYear.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 13.8F);
+            this.lblYear.Location = new System.Drawing.Point(496, 166);
+            this.lblYear.Name = "lblYear";
+            this.lblYear.Size = new System.Drawing.Size(60, 28);
+            this.lblYear.TabIndex = 13;
+            this.lblYear.Text = "Year:";
+            // 
+            // lblProbeg
+            // 
+            this.lblProbeg.AutoSize = true;
+            this.lblProbeg.BackColor = System.Drawing.Color.Transparent;
+            this.lblProbeg.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 13.8F);
+            this.lblProbeg.Location = new System.Drawing.Point(496, 211);
+            this.lblProbeg.Name = "lblProbeg";
+            this.lblProbeg.Size = new System.Drawing.Size(82, 28);
+            this.lblProbeg.TabIndex = 14;
+            this.lblProbeg.Text = "Probeg:";
+            // 
+            // lblMoney
+            // 
+            this.lblMoney.AutoSize = true;
+            this.lblMoney.BackColor = System.Drawing.Color.Transparent;
+            this.lblMoney.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 13.8F);
+            this.lblMoney.Location = new System.Drawing.Point(496, 256);
+            this.lblMoney.Name = "lblMoney";
+            this.lblMoney.Size = new System.Drawing.Size(79, 28);
+            this.lblMoney.TabIndex = 15;
+            this.lblMoney.Text = "Money:";
+            // 
+            // btnGoBack
+            // 
+            this.btnGoBack.BackColor = System.Drawing.Color.LightSlateGray;
+            this.btnGoBack.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 13.8F);
+            this.btnGoBack.Location = new System.Drawing.Point(501, 643);
+            this.btnGoBack.Name = "btnGoBack";
+            this.btnGoBack.Size = new System.Drawing.Size(147, 57);
+            this.btnGoBack.TabIndex = 16;
+            this.btnGoBack.Text = "Back";
+            this.btnGoBack.UseVisualStyleBackColor = false;
+            this.btnGoBack.Click += new System.EventHandler(this.btnGoBack_Click);
             // 
             // pictureBoxImage8
             // 
+            this.pictureBoxImage8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBoxImage8.Location = new System.Drawing.Point(330, 600);
             this.pictureBoxImage8.Name = "pictureBoxImage8";
             this.pictureBoxImage8.Size = new System.Drawing.Size(100, 100);
@@ -117,6 +159,7 @@
             // 
             // pictureBoxImage7
             // 
+            this.pictureBoxImage7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBoxImage7.Location = new System.Drawing.Point(224, 600);
             this.pictureBoxImage7.Name = "pictureBoxImage7";
             this.pictureBoxImage7.Size = new System.Drawing.Size(100, 100);
@@ -127,6 +170,7 @@
             // 
             // pictureBoxImage6
             // 
+            this.pictureBoxImage6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBoxImage6.Location = new System.Drawing.Point(118, 600);
             this.pictureBoxImage6.Name = "pictureBoxImage6";
             this.pictureBoxImage6.Size = new System.Drawing.Size(100, 100);
@@ -137,6 +181,7 @@
             // 
             // pictureBoxImage5
             // 
+            this.pictureBoxImage5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBoxImage5.Location = new System.Drawing.Point(12, 600);
             this.pictureBoxImage5.Name = "pictureBoxImage5";
             this.pictureBoxImage5.Size = new System.Drawing.Size(100, 100);
@@ -145,92 +190,64 @@
             this.pictureBoxImage5.TabStop = false;
             this.pictureBoxImage5.Click += new System.EventHandler(this.pictureBoxImage5_Click);
             // 
-            // btnBuy
+            // pictureBoxImage4
             // 
-            this.btnBuy.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnBuy.Location = new System.Drawing.Point(760, 643);
-            this.btnBuy.Name = "btnBuy";
-            this.btnBuy.Size = new System.Drawing.Size(147, 57);
-            this.btnBuy.TabIndex = 9;
-            this.btnBuy.Text = "Buy";
-            this.btnBuy.UseVisualStyleBackColor = true;
-            this.btnBuy.Click += new System.EventHandler(this.btnBuy_Click);
+            this.pictureBoxImage4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxImage4.Location = new System.Drawing.Point(330, 494);
+            this.pictureBoxImage4.Name = "pictureBoxImage4";
+            this.pictureBoxImage4.Size = new System.Drawing.Size(100, 100);
+            this.pictureBoxImage4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxImage4.TabIndex = 4;
+            this.pictureBoxImage4.TabStop = false;
+            this.pictureBoxImage4.Click += new System.EventHandler(this.pictureBoxImage4_Click);
             // 
-            // lblBrand
+            // pictureBoxImage3
             // 
-            this.lblBrand.AutoSize = true;
-            this.lblBrand.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblBrand.Location = new System.Drawing.Point(496, 31);
-            this.lblBrand.Name = "lblBrand";
-            this.lblBrand.Size = new System.Drawing.Size(83, 29);
-            this.lblBrand.TabIndex = 10;
-            this.lblBrand.Text = "Brand:";
+            this.pictureBoxImage3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxImage3.Location = new System.Drawing.Point(224, 494);
+            this.pictureBoxImage3.Name = "pictureBoxImage3";
+            this.pictureBoxImage3.Size = new System.Drawing.Size(100, 100);
+            this.pictureBoxImage3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxImage3.TabIndex = 3;
+            this.pictureBoxImage3.TabStop = false;
+            this.pictureBoxImage3.Click += new System.EventHandler(this.pictureBoxImage3_Click);
             // 
-            // lblModel
+            // pictureBoxImage2
             // 
-            this.lblModel.AutoSize = true;
-            this.lblModel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblModel.Location = new System.Drawing.Point(496, 76);
-            this.lblModel.Name = "lblModel";
-            this.lblModel.Size = new System.Drawing.Size(93, 29);
-            this.lblModel.TabIndex = 11;
-            this.lblModel.Text = "Model: ";
+            this.pictureBoxImage2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxImage2.Location = new System.Drawing.Point(118, 494);
+            this.pictureBoxImage2.Name = "pictureBoxImage2";
+            this.pictureBoxImage2.Size = new System.Drawing.Size(100, 100);
+            this.pictureBoxImage2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxImage2.TabIndex = 2;
+            this.pictureBoxImage2.TabStop = false;
+            this.pictureBoxImage2.Click += new System.EventHandler(this.pictureBoxImage2_Click);
             // 
-            // lblColor
+            // pictureBoxImage1
             // 
-            this.lblColor.AutoSize = true;
-            this.lblColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblColor.Location = new System.Drawing.Point(496, 121);
-            this.lblColor.Name = "lblColor";
-            this.lblColor.Size = new System.Drawing.Size(78, 29);
-            this.lblColor.TabIndex = 12;
-            this.lblColor.Text = "Color:";
+            this.pictureBoxImage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxImage1.Location = new System.Drawing.Point(12, 494);
+            this.pictureBoxImage1.Name = "pictureBoxImage1";
+            this.pictureBoxImage1.Size = new System.Drawing.Size(100, 100);
+            this.pictureBoxImage1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxImage1.TabIndex = 1;
+            this.pictureBoxImage1.TabStop = false;
+            this.pictureBoxImage1.Click += new System.EventHandler(this.pictureBoxImage1_Click);
             // 
-            // lblYear
+            // pictureBoxZoomImage
             // 
-            this.lblYear.AutoSize = true;
-            this.lblYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblYear.Location = new System.Drawing.Point(496, 166);
-            this.lblYear.Name = "lblYear";
-            this.lblYear.Size = new System.Drawing.Size(70, 29);
-            this.lblYear.TabIndex = 13;
-            this.lblYear.Text = "Year:";
-            // 
-            // lblProbeg
-            // 
-            this.lblProbeg.AutoSize = true;
-            this.lblProbeg.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblProbeg.Location = new System.Drawing.Point(496, 211);
-            this.lblProbeg.Name = "lblProbeg";
-            this.lblProbeg.Size = new System.Drawing.Size(99, 29);
-            this.lblProbeg.TabIndex = 14;
-            this.lblProbeg.Text = "Probeg:";
-            // 
-            // lblMoney
-            // 
-            this.lblMoney.AutoSize = true;
-            this.lblMoney.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblMoney.Location = new System.Drawing.Point(496, 256);
-            this.lblMoney.Name = "lblMoney";
-            this.lblMoney.Size = new System.Drawing.Size(91, 29);
-            this.lblMoney.TabIndex = 15;
-            this.lblMoney.Text = "Money:";
-            // 
-            // btnGoBack
-            // 
-            this.btnGoBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnGoBack.Location = new System.Drawing.Point(501, 643);
-            this.btnGoBack.Name = "btnGoBack";
-            this.btnGoBack.Size = new System.Drawing.Size(147, 57);
-            this.btnGoBack.TabIndex = 16;
-            this.btnGoBack.Text = "Back";
-            this.btnGoBack.UseVisualStyleBackColor = true;
-            this.btnGoBack.Click += new System.EventHandler(this.btnGoBack_Click);
+            this.pictureBoxZoomImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxZoomImage.Location = new System.Drawing.Point(12, 31);
+            this.pictureBoxZoomImage.Name = "pictureBoxZoomImage";
+            this.pictureBoxZoomImage.Size = new System.Drawing.Size(418, 418);
+            this.pictureBoxZoomImage.TabIndex = 0;
+            this.pictureBoxZoomImage.TabStop = false;
             // 
             // Form10
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.RoyalBlue;
             this.ClientSize = new System.Drawing.Size(919, 725);
             this.Controls.Add(this.btnGoBack);
             this.Controls.Add(this.lblMoney);
@@ -252,15 +269,15 @@
             this.Name = "Form10";
             this.Text = "BuyCar";
             this.Load += new System.EventHandler(this.Form10_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxZoomImage)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxZoomImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

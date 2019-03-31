@@ -42,9 +42,15 @@ namespace AutoHouse
             }
             else
             {
+<<<<<<< HEAD
                 bool flag = true;
                 MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
                 try
+=======
+                MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
+                connection.Open();
+                using (connection)
+>>>>>>> fb07346e3a0f6988e10517e6f2f495128092df6f
                 {
                     connection.Open();
                     using (connection)

@@ -40,7 +40,7 @@ namespace AutoHouse
 
         public void IfOwner()
         {
-            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
+            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
             try
             {
                 List<int> idAH = new List<int>();
@@ -76,7 +76,7 @@ namespace AutoHouse
         public void Reconect()
         {
             autoHouse.Clear();
-            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
+            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
             try
             {
                 using (connection)
@@ -94,7 +94,7 @@ namespace AutoHouse
                         string town = reader["town"].ToString();
                         List<Car> carsForSell = new List<Car>();
                         List<Car> rentaCars = new List<Car>();
-                        MySqlConnection connectionCarForSell = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
+                        MySqlConnection connectionCarForSell = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
                         connectionCarForSell.Open();
                         using (connectionCarForSell)
                         {
@@ -125,7 +125,7 @@ namespace AutoHouse
                         }
 
 
-                        MySqlConnection connectionRentaCar = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
+                        MySqlConnection connectionRentaCar = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
                         connectionRentaCar.Open();
                         using (connectionRentaCar)
                         {

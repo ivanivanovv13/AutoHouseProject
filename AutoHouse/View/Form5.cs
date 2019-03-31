@@ -96,7 +96,7 @@ namespace AutoHouse.View
 
         private void CantRenta()
         {
-            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
+            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
             try
             {
                 
@@ -308,6 +308,16 @@ namespace AutoHouse.View
             Form fm = new Form12(user,autoHouses[curentAhID],autoHouses[curentAhID].RentaCars[startCar],autoHouses,curentAhID,startCar,startAH, dateTimePicker1.Value.ToString("yyyy-MM-dd"), dateTimePicker2.Value.ToString("yyyy-MM-dd"),(dateTimePicker2.Value-dateTimePicker1.Value).Days);
             fm.Show();
             this.Hide();
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

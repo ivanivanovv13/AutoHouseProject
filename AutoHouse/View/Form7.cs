@@ -51,7 +51,7 @@ namespace AutoHouse.View
             }
 
 
-            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
+            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
             try
             {
                 using (connection)
@@ -188,7 +188,7 @@ namespace AutoHouse.View
                     {
                         for (int i = 0; i < statisticRents[index].Count; i++)
                         {
-                            listBoxStatistic.Items.Add(this.statisticRents[index][i].User + " " + this.statisticRents[index][i].AH + " " + this.statisticRents[index][i].MoneyForRent + " " + this.statisticRents[index][i].TimeTake + " " + this.statisticRents[index][i].TimeReturn);
+                            listBoxStatistic.Items.Add(this.statisticRents[index][i].User + " " + this.statisticRents[index][i].AH + " " + " "+ this.statisticRents[index][i].MoneyForRent + " " + this.statisticRents[index][i].TimeTake + " " + this.statisticRents[index][i].TimeReturn);
                         }
                     }
                     catch (Exception)
@@ -203,7 +203,7 @@ namespace AutoHouse.View
                     {
                         for (int i = 0; i < statisticSells[0].Count; i++)
                         {
-                            listBoxStatistic.Items.Add(this.statisticRents[0][i].User + " " + this.statisticRents[0][i].AH + " " + this.statisticRents[0][i].MoneyForRent + " " + this.statisticRents[0][i].TimeTake.ToShortDateString() + " " + this.statisticRents[0][i].TimeReturn.ToShortDateString());
+                            listBoxStatistic.Items.Add(this.statisticRents[0][i].User + " " + this.statisticRents[0][i].AH + " "+ this.statisticRents[0][i].Car.Brand +" " + this.statisticRents[0][i].MoneyForRent + " " + this.statisticRents[0][i].TimeTake.ToShortDateString() + " " + this.statisticRents[0][i].TimeReturn.ToShortDateString());
                         }
                     }
                     catch (Exception)

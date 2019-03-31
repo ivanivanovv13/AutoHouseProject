@@ -43,7 +43,7 @@
             this.listBoxCars.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.listBoxCars.FormattingEnabled = true;
             this.listBoxCars.ItemHeight = 29;
-            this.listBoxCars.Location = new System.Drawing.Point(1, 177);
+            this.listBoxCars.Location = new System.Drawing.Point(37, 129);
             this.listBoxCars.Name = "listBoxCars";
             this.listBoxCars.Size = new System.Drawing.Size(915, 526);
             this.listBoxCars.TabIndex = 0;
@@ -60,24 +60,25 @@
             // 
             // btnPrintCars
             // 
-            this.btnPrintCars.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnPrintCars.Location = new System.Drawing.Point(1181, 55);
+            this.btnPrintCars.BackColor = System.Drawing.Color.LightSlateGray;
+            this.btnPrintCars.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrintCars.Location = new System.Drawing.Point(1182, 57);
             this.btnPrintCars.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPrintCars.Name = "btnPrintCars";
             this.btnPrintCars.Size = new System.Drawing.Size(139, 39);
             this.btnPrintCars.TabIndex = 9;
             this.btnPrintCars.Text = "Print Cars";
-            this.btnPrintCars.UseVisualStyleBackColor = true;
+            this.btnPrintCars.UseVisualStyleBackColor = false;
             this.btnPrintCars.Click += new System.EventHandler(this.btnPrintCars_Click);
             // 
             // radioBtnAllCars
             // 
             this.radioBtnAllCars.AutoSize = true;
-            this.radioBtnAllCars.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.radioBtnAllCars.Location = new System.Drawing.Point(1057, 60);
+            this.radioBtnAllCars.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioBtnAllCars.Location = new System.Drawing.Point(1048, 58);
             this.radioBtnAllCars.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioBtnAllCars.Name = "radioBtnAllCars";
-            this.radioBtnAllCars.Size = new System.Drawing.Size(97, 29);
+            this.radioBtnAllCars.Size = new System.Drawing.Size(115, 37);
             this.radioBtnAllCars.TabIndex = 8;
             this.radioBtnAllCars.TabStop = true;
             this.radioBtnAllCars.Text = "All cars";
@@ -86,11 +87,11 @@
             // radioBtnSellCars
             // 
             this.radioBtnSellCars.AutoSize = true;
-            this.radioBtnSellCars.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.radioBtnSellCars.Location = new System.Drawing.Point(904, 60);
+            this.radioBtnSellCars.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioBtnSellCars.Location = new System.Drawing.Point(895, 58);
             this.radioBtnSellCars.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioBtnSellCars.Name = "radioBtnSellCars";
-            this.radioBtnSellCars.Size = new System.Drawing.Size(108, 29);
+            this.radioBtnSellCars.Size = new System.Drawing.Size(124, 37);
             this.radioBtnSellCars.TabIndex = 7;
             this.radioBtnSellCars.TabStop = true;
             this.radioBtnSellCars.Text = "Sell cars";
@@ -99,11 +100,11 @@
             // radioBtnRentaCars
             // 
             this.radioBtnRentaCars.AutoSize = true;
-            this.radioBtnRentaCars.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.radioBtnRentaCars.Location = new System.Drawing.Point(720, 60);
+            this.radioBtnRentaCars.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioBtnRentaCars.Location = new System.Drawing.Point(711, 58);
             this.radioBtnRentaCars.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioBtnRentaCars.Name = "radioBtnRentaCars";
-            this.radioBtnRentaCars.Size = new System.Drawing.Size(131, 29);
+            this.radioBtnRentaCars.Size = new System.Drawing.Size(152, 37);
             this.radioBtnRentaCars.TabIndex = 6;
             this.radioBtnRentaCars.TabStop = true;
             this.radioBtnRentaCars.Text = "Renta cars ";
@@ -111,31 +112,34 @@
             // 
             // btnDeleteSelectedCar
             // 
-            this.btnDeleteSelectedCar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnDeleteSelectedCar.Location = new System.Drawing.Point(1013, 233);
+            this.btnDeleteSelectedCar.BackColor = System.Drawing.Color.LightSlateGray;
+            this.btnDeleteSelectedCar.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteSelectedCar.Location = new System.Drawing.Point(1004, 231);
             this.btnDeleteSelectedCar.Name = "btnDeleteSelectedCar";
-            this.btnDeleteSelectedCar.Size = new System.Drawing.Size(208, 66);
+            this.btnDeleteSelectedCar.Size = new System.Drawing.Size(208, 45);
             this.btnDeleteSelectedCar.TabIndex = 11;
             this.btnDeleteSelectedCar.Text = "Delete selected car";
-            this.btnDeleteSelectedCar.UseVisualStyleBackColor = true;
+            this.btnDeleteSelectedCar.UseVisualStyleBackColor = false;
             this.btnDeleteSelectedCar.Click += new System.EventHandler(this.btnDeleteSelectedCar_Click);
             // 
             // btnBack
             // 
-            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnBack.Location = new System.Drawing.Point(1012, 351);
+            this.btnBack.BackColor = System.Drawing.Color.LightSlateGray;
+            this.btnBack.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.Location = new System.Drawing.Point(1003, 349);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(208, 66);
+            this.btnBack.Size = new System.Drawing.Size(209, 52);
             this.btnBack.TabIndex = 13;
             this.btnBack.Text = "GoBack";
-            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // Form8
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1332, 698);
+            this.BackColor = System.Drawing.Color.RoyalBlue;
+            this.ClientSize = new System.Drawing.Size(1342, 826);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnDeleteSelectedCar);
             this.Controls.Add(this.comboBoxAutoHouse);
@@ -144,6 +148,7 @@
             this.Controls.Add(this.radioBtnSellCars);
             this.Controls.Add(this.radioBtnRentaCars);
             this.Controls.Add(this.listBoxCars);
+            this.ForeColor = System.Drawing.Color.Black;
             this.Name = "Form8";
             this.Text = "Form8";
             this.Load += new System.EventHandler(this.Form8_Load);

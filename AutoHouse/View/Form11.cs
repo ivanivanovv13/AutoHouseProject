@@ -22,7 +22,7 @@ namespace AutoHouse.View
             this.users = users;
 
 
-            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
+            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
             try
             {
                 using (connection)
@@ -40,7 +40,7 @@ namespace AutoHouse.View
                         string adres = reader["adress"].ToString();
                         int idOwner = int.Parse(reader["id_owner"].ToString());
                         string town = reader["town"].ToString();
-                        MySqlConnection connectionCarForSell = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
+                        MySqlConnection connectionCarForSell = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
                         connectionCarForSell.Open();
                         using (connectionCarForSell)
                         {
@@ -70,7 +70,7 @@ namespace AutoHouse.View
                         }
 
 
-                        MySqlConnection connectionRentaCar = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
+                        MySqlConnection connectionRentaCar = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
                         connectionRentaCar.Open();
                         using (connectionRentaCar)
                         {
@@ -174,6 +174,43 @@ namespace AutoHouse.View
         private void Form11_Load(object sender, EventArgs e)
         {
             this.MaximizeBox = false;
+
+            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
+            connection.Open();
+            using (connection)
+            {
+                MySqlCommand sqlcomCar = new MySqlCommand("select permission.delAH,permission.delUser,permission.viewStatistic,permission.addCars,permission.delCars from permission where permission.id_user='"+users.Id+"';", connection);
+
+                MySqlDataReader reader = sqlcomCar.ExecuteReader();
+
+                if(reader.Read())
+                {
+                    if(reader["delAH"].ToString()=="N")
+                    {
+                        btnRemoveAH.Enabled = false;
+                    }
+                    if(reader["delUser"].ToString()== "N")
+                    {
+                        btnRemoveUser.Enabled = false;
+                    }
+                    if (reader["viewStatistic"].ToString() == "N")
+                    {
+                        btnStatistic.Enabled = false;
+                    }
+                    if (reader["addCars"].ToString() == "N")
+                    {
+                        btnAddCar.Enabled = false;
+                    }
+                    if (reader["delCars"].ToString() == "N")
+                    {
+                        btnRemoveCar.Enabled = false;
+                    }
+                }
+                reader.Close();
+                sqlcomCar.Dispose();
+            }
+
+
         }
     }
 }

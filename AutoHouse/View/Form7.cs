@@ -17,9 +17,9 @@ namespace AutoHouse.View
         Users users;
         List<AutoHouse> AutoHouse = new List<AutoHouse>();
 
-        List<StatisticSell>[] statisticSells = new List<StatisticSell>[10];
+        List<StatisticSell>[] statisticSells;
 
-        List<StatisticRent>[] statisticRents = new List<StatisticRent>[10];
+        List<StatisticRent>[] statisticRents;
 
         protected override void OnClosing(CancelEventArgs e)
         {
@@ -29,7 +29,9 @@ namespace AutoHouse.View
         public Form7(Users user,List<AutoHouse> AutoHouse)
         {
             this.AutoHouse = AutoHouse;
-           
+
+            statisticSells = new List<StatisticSell>[AutoHouse.Count];
+            statisticRents = new List<StatisticRent>[AutoHouse.Count];
             this.users = user;
             InitializeComponent();
         }
@@ -52,7 +54,7 @@ namespace AutoHouse.View
             }
 
 
-            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
+            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
             try
             {
                 using (connection)
@@ -144,23 +146,23 @@ namespace AutoHouse.View
         private void btnPrintStatistic_Click(object sender, EventArgs e)
         {
             listBoxStatistic.Items.Clear();
-            if (radioBtnSellCarsStatistic.Checked==true || radioBtnVsichkiStatistic.Checked==true)
+            if (radioBtnSellCarsStatistic.Checked == true || radioBtnVsichkiStatistic.Checked == true)
             {
-                if (AutoHouse.Count>1)
+                if (AutoHouse.Count > 1)
                 {
                     int index = comboBoxAutoHouse.SelectedIndex;
                     try
-                    {                        
+                    {
                         for (int i = 0; i < statisticSells[index].Count; i++)
                         {
-                            listBoxStatistic.Items.Add(this.statisticSells[index][i].User + " " + this.statisticSells[index][i].AH + " " + this.statisticSells[index][i].SellPrice + " " + this.statisticSells[index][i].SoldTime);
+                            listBoxStatistic.Items.Add(this.statisticSells[index][i].User + " " + this.statisticSells[index][i].AH + " " + this.statisticSells[index][i].Car.Brand + " " + this.statisticSells[index][i].Car.Model + " " + this.statisticSells[index][i].Car.Color + " " + this.statisticSells[index][i].Car.Probeg + " " + this.statisticSells[index][i].Car.Year + " " + this.statisticSells[index][i].SellPrice + " " + this.statisticSells[index][i].SoldTime);
                         }
                     }
                     catch (Exception)
                     {
 
-                    }                       
-                    
+                    }
+
                 }
                 else
                 {
@@ -168,20 +170,20 @@ namespace AutoHouse.View
                     {
                         for (int i = 0; i < statisticSells[0].Count; i++)
                         {
-                            listBoxStatistic.Items.Add(statisticSells[0][i].User + " " + statisticSells[0][i].AH + " " + statisticSells[0][i].SellPrice + " " + statisticSells[0][i].SoldTime);
+                            listBoxStatistic.Items.Add(this.statisticSells[0][i].User + " " + this.statisticSells[0][i].AH + " " + this.statisticSells[0][i].Car.Brand + " " + this.statisticSells[0][i].Car.Model + " " + this.statisticSells[0][i].Car.Color + " " + this.statisticSells[0][i].Car.Probeg + " " + this.statisticSells[0][i].Car.Year + " " + this.statisticSells[0][i].SellPrice + " " + this.statisticSells[0][i].SoldTime);
                         }
                     }
                     catch (Exception)
                     {
 
                     }
-                    
+
                 }
             }
 
-            if(radioBtnRentaCarStatistic.Checked==true || radioBtnVsichkiStatistic.Checked == true)
+            if (radioBtnRentaCarStatistic.Checked == true || radioBtnVsichkiStatistic.Checked == true)
             {
-                
+
                 if (AutoHouse.Count > 1)
                 {
                     int index = comboBoxAutoHouse.SelectedIndex;
@@ -189,7 +191,7 @@ namespace AutoHouse.View
                     {
                         for (int i = 0; i < statisticRents[index].Count; i++)
                         {
-                            listBoxStatistic.Items.Add(this.statisticRents[index][i].User + " " + this.statisticRents[index][i].AH + " " + " "+ this.statisticRents[index][i].MoneyForRent + " " + this.statisticRents[index][i].TimeTake + " " + this.statisticRents[index][i].TimeReturn);
+                            listBoxStatistic.Items.Add(this.statisticRents[index][i].User + " " + this.statisticRents[index][i].AH + " " + this.statisticRents[index][i].Car.Brand + " " + this.statisticRents[index][i].Car.Model + " " + this.statisticRents[index][i].Car.Color + " " + this.statisticRents[index][i].Car.Probeg + " " + this.statisticRents[index][i].Car.Year + " " + this.statisticRents[index][i].MoneyForRent + " " + this.statisticRents[index][i].TimeTake.ToShortDateString() + " " + this.statisticRents[index][i].TimeReturn.ToShortDateString());
                         }
                     }
                     catch (Exception)
@@ -204,7 +206,7 @@ namespace AutoHouse.View
                     {
                         for (int i = 0; i < statisticSells[0].Count; i++)
                         {
-                            listBoxStatistic.Items.Add(this.statisticRents[0][i].User + " " + this.statisticRents[0][i].AH + " "+ this.statisticRents[0][i].Car.Brand +" " + this.statisticRents[0][i].MoneyForRent + " " + this.statisticRents[0][i].TimeTake.ToShortDateString() + " " + this.statisticRents[0][i].TimeReturn.ToShortDateString());
+                            listBoxStatistic.Items.Add(this.statisticRents[0][i].User + " " + this.statisticRents[0][i].AH + " " + this.statisticRents[0][i].Car.Brand + " " + this.statisticRents[0][i].Car.Model + " " + this.statisticRents[0][i].Car.Color + " " + this.statisticRents[0][i].Car.Probeg + " " + this.statisticRents[0][i].Car.Year + " " + this.statisticRents[0][i].MoneyForRent + " " + this.statisticRents[0][i].TimeTake.ToShortDateString() + " " + this.statisticRents[0][i].TimeReturn.ToShortDateString());
                         }
                     }
                     catch (Exception)

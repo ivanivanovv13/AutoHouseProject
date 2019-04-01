@@ -46,10 +46,10 @@ namespace AutoHouse
             {
 
                 bool flag = true;
-                MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
+                MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
                 try
                 {
-                    connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
+                    connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
                     connection.Open();
                     using (connection)
                     {

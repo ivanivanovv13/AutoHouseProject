@@ -34,7 +34,7 @@ namespace AutoHouse.View
                 connection.Open();
                 using (connection)
                 {
-                    MySqlCommand sqlcom = new MySqlCommand("select users.id,users.user,users.pass from users where users.id!='" + user.Id + "';", connection);
+                    MySqlCommand sqlcom = new MySqlCommand("select users.id,users.user,users.pass from users where users.id!='" + user.Id + "' and users.pass !='null';", connection);
                     MySqlDataReader MyReader2 = sqlcom.ExecuteReader();
                     while (MyReader2.Read())
                     {
@@ -108,18 +108,6 @@ namespace AutoHouse.View
                     }
                 }
 
-
-
-                connection.Open();
-                sqlcom = new MySqlCommand("update autohouses set autohouses.id_owner=null where autohouses.id_owner='" + users[index].Id + "';", connection);
-
-                MyReader2 = sqlcom.ExecuteReader();
-                while (MyReader2.Read())
-                {
-                }
-                connection.Close();
-                
-
                 for (int i = 0; i < idAutoHouses.Count; i++)
                 {
                     sqlcom = new MySqlCommand("DELETE FROM users_ah where users_ah.id_ah='" + idAutoHouses[i]+"';", connection);
@@ -134,12 +122,9 @@ namespace AutoHouse.View
                 }
                 
 
-
-
-
                 connection.Open();
-                sqlcom = new MySqlCommand("DELETE FROM users WHERE users.id='"+users[index].Id+"';", connection);
-                
+                sqlcom = new MySqlCommand("update users set users.pass=null where users.id='" + users[index].Id + "';", connection);
+
                 MyReader2 = sqlcom.ExecuteReader();
                 while (MyReader2.Read())
                 {

@@ -32,6 +32,11 @@ namespace AutoHouse.View
             }
         }
 
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
         private void Form17_Load(object sender, EventArgs e)
         {
             this.MaximizeBox = false;

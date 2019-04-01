@@ -49,7 +49,7 @@ namespace AutoHouse.View
             int index = listBoxAutoHouses.SelectedIndex;
             try
             {
-                MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
+                MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
                 MySqlCommand sqlcom = new MySqlCommand("DELETE FROM users_ah where users_ah.id_ah='" + autoHouses[index].Id + "';", connection);
                 MySqlDataReader MyReader2;
                 connection.Open();

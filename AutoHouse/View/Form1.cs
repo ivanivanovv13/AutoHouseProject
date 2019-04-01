@@ -14,7 +14,7 @@ namespace AutoHouse
     public partial class Form1 : Form
     {
        Controller test = new Controller();
-        MySqlConnection connection;
+
 
 
 
@@ -45,10 +45,10 @@ namespace AutoHouse
             {
 
                 bool flag = true;
-                MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
+                MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
                 try
                 {
-                    connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
+                    connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
                     connection.Open();
                     using (connection)
                     {

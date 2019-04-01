@@ -72,6 +72,7 @@
             this.label7.Size = new System.Drawing.Size(81, 33);
             this.label7.TabIndex = 33;
             this.label7.Text = "label7";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label6
             // 
@@ -83,6 +84,7 @@
             this.label6.Size = new System.Drawing.Size(81, 33);
             this.label6.TabIndex = 32;
             this.label6.Text = "label6";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label5
             // 
@@ -94,6 +96,7 @@
             this.label5.Size = new System.Drawing.Size(81, 33);
             this.label5.TabIndex = 31;
             this.label5.Text = "label5";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label3
             // 
@@ -105,6 +108,7 @@
             this.label3.Size = new System.Drawing.Size(81, 33);
             this.label3.TabIndex = 30;
             this.label3.Text = "label3";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 
@@ -127,6 +131,7 @@
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 28;
             this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
             // pictureBox4
             // 
@@ -137,6 +142,7 @@
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 27;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // pictureBox3
             // 
@@ -147,6 +153,7 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 26;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // pictureBox2
             // 
@@ -157,6 +164,7 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 25;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pictureBox1
             // 
@@ -167,6 +175,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 24;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // lblAH5
             // 
@@ -178,6 +187,7 @@
             this.lblAH5.Size = new System.Drawing.Size(81, 33);
             this.lblAH5.TabIndex = 23;
             this.lblAH5.Text = "label2";
+            this.lblAH5.Click += new System.EventHandler(this.lblAH5_Click);
             // 
             // lblAH4
             // 
@@ -189,6 +199,7 @@
             this.lblAH4.Size = new System.Drawing.Size(81, 33);
             this.lblAH4.TabIndex = 22;
             this.lblAH4.Text = "label2";
+            this.lblAH4.Click += new System.EventHandler(this.lblAH4_Click);
             // 
             // lblAH2
             // 
@@ -200,6 +211,7 @@
             this.lblAH2.Size = new System.Drawing.Size(81, 33);
             this.lblAH2.TabIndex = 21;
             this.lblAH2.Text = "label2";
+            this.lblAH2.Click += new System.EventHandler(this.lblAH2_Click);
             // 
             // lblAH3
             // 
@@ -211,6 +223,7 @@
             this.lblAH3.Size = new System.Drawing.Size(81, 33);
             this.lblAH3.TabIndex = 20;
             this.lblAH3.Text = "label2";
+            this.lblAH3.Click += new System.EventHandler(this.lblAH3_Click);
             // 
             // lblAH1
             // 

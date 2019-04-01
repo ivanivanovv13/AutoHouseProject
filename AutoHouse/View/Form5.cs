@@ -19,7 +19,6 @@ namespace AutoHouse.View
 
         List<AutoHouse> autoHousesRenta = new List<AutoHouse>();
 
-        bool flag = false;
 
         Label[] labelsAH = new Label[5];
         Label[] labelsCars = new Label[5];
@@ -52,23 +51,6 @@ namespace AutoHouse.View
 
         }
 
-
-        public Form5(Users user, List<AutoHouse> autoHouse, int curentAH, int startCar, int startAH)
-        {
-            this.user = user;
-            this.autoHouses = autoHouse;
-            this.curentAhID = curentAH;
-            this.startCar = startCar;
-            this.startAH = startAH;
-            this.autoHousesRenta = autoHouse;
-            
-
-
-            flag = true;
-
-            InitializeComponent();
-        }
-
         public Form5(Users user, List<AutoHouse> autoHouse)
         {
 
@@ -76,7 +58,7 @@ namespace AutoHouse.View
             this.autoHouses = autoHouse;
             this.autoHousesRenta = autoHouse;
 
-            flag = false;
+  
 
             InitializeComponent();
         }
@@ -90,13 +72,17 @@ namespace AutoHouse.View
         {
             addLabelAndPictureBox();
             VisibalFalseAll();
+            btnNextAH.Visible = false;
+            btnPreviousAH.Visible = false;
+            btnNextCars.Visible = false;
+            btnPreviousCars.Visible = false;
 
 
         }
 
         private void CantRenta()
         {
-            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
+            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
             try
             {
                 
@@ -232,6 +218,7 @@ namespace AutoHouse.View
         private void btnSearch_Click(object sender, EventArgs e)
         {
 
+            if(dateTimePicker1.Value>= DateTime.UtcNow.Date)
             if (dateTimePicker1.Value<dateTimePicker2.Value)
             {
                 CantRenta();
@@ -245,10 +232,6 @@ namespace AutoHouse.View
 
                 displayAH(startAH);
                 
-                if (flag)
-                {
-                    displayCars(startCar, autoHouses[curentAhID]);
-                }
 
             }
             
@@ -318,6 +301,89 @@ namespace AutoHouse.View
         private void label8_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void lblAH2_Click(object sender, EventArgs e)
+        {
+            displayCars(startCar, autoHousesRenta[startAH+1]);
+        }
+
+        private void lblAH3_Click(object sender, EventArgs e)
+        {
+            displayCars(startCar, autoHousesRenta[startAH+2]);
+        }
+
+        private void lblAH4_Click(object sender, EventArgs e)
+        {
+            displayCars(startCar, autoHousesRenta[startAH+3]);
+        }
+
+        private void lblAH5_Click(object sender, EventArgs e)
+        {
+            displayCars(startCar, autoHousesRenta[startAH+4]);
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Form fm = new Form12(user, autoHouses[curentAhID], autoHouses[curentAhID].RentaCars[startCar], autoHouses, curentAhID, startCar, startAH, dateTimePicker1.Value.ToString("yyyy-MM-dd"), dateTimePicker2.Value.ToString("yyyy-MM-dd"), (dateTimePicker2.Value - dateTimePicker1.Value).Days);
+            fm.Show();
+            this.Hide();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            Form fm = new Form12(user, autoHouses[curentAhID], autoHouses[curentAhID].RentaCars[startCar+1], autoHouses, curentAhID, startCar, startAH, dateTimePicker1.Value.ToString("yyyy-MM-dd"), dateTimePicker2.Value.ToString("yyyy-MM-dd"), (dateTimePicker2.Value - dateTimePicker1.Value).Days);
+            fm.Show();
+            this.Hide();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Form fm = new Form12(user, autoHouses[curentAhID], autoHouses[curentAhID].RentaCars[startCar + 1], autoHouses, curentAhID, startCar, startAH, dateTimePicker1.Value.ToString("yyyy-MM-dd"), dateTimePicker2.Value.ToString("yyyy-MM-dd"), (dateTimePicker2.Value - dateTimePicker1.Value).Days);
+            fm.Show();
+            this.Hide();
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            Form fm = new Form12(user, autoHouses[curentAhID], autoHouses[curentAhID].RentaCars[startCar + 2], autoHouses, curentAhID, startCar, startAH, dateTimePicker1.Value.ToString("yyyy-MM-dd"), dateTimePicker2.Value.ToString("yyyy-MM-dd"), (dateTimePicker2.Value - dateTimePicker1.Value).Days);
+            fm.Show();
+            this.Hide();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            Form fm = new Form12(user, autoHouses[curentAhID], autoHouses[curentAhID].RentaCars[startCar + 2], autoHouses, curentAhID, startCar, startAH, dateTimePicker1.Value.ToString("yyyy-MM-dd"), dateTimePicker2.Value.ToString("yyyy-MM-dd"), (dateTimePicker2.Value - dateTimePicker1.Value).Days);
+            fm.Show();
+            this.Hide();
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            Form fm = new Form12(user, autoHouses[curentAhID], autoHouses[curentAhID].RentaCars[startCar + 3], autoHouses, curentAhID, startCar, startAH, dateTimePicker1.Value.ToString("yyyy-MM-dd"), dateTimePicker2.Value.ToString("yyyy-MM-dd"), (dateTimePicker2.Value - dateTimePicker1.Value).Days);
+            fm.Show();
+            this.Hide();
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            Form fm = new Form12(user, autoHouses[curentAhID], autoHouses[curentAhID].RentaCars[startCar + 3], autoHouses, curentAhID, startCar, startAH, dateTimePicker1.Value.ToString("yyyy-MM-dd"), dateTimePicker2.Value.ToString("yyyy-MM-dd"), (dateTimePicker2.Value - dateTimePicker1.Value).Days);
+            fm.Show();
+            this.Hide();
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+            Form fm = new Form12(user, autoHouses[curentAhID], autoHouses[curentAhID].RentaCars[startCar + 4], autoHouses, curentAhID, startCar, startAH, dateTimePicker1.Value.ToString("yyyy-MM-dd"), dateTimePicker2.Value.ToString("yyyy-MM-dd"), (dateTimePicker2.Value - dateTimePicker1.Value).Days);
+            fm.Show();
+            this.Hide();
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            Form fm = new Form12(user, autoHouses[curentAhID], autoHouses[curentAhID].RentaCars[startCar + 4], autoHouses, curentAhID, startCar, startAH, dateTimePicker1.Value.ToString("yyyy-MM-dd"), dateTimePicker2.Value.ToString("yyyy-MM-dd"), (dateTimePicker2.Value - dateTimePicker1.Value).Days);
+            fm.Show();
+            this.Hide();
         }
     }
 }

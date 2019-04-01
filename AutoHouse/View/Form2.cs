@@ -40,7 +40,7 @@ namespace AutoHouse
 
         public void IfOwner()
         {
-            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
+            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
             try
             {
                 List<int> idAH = new List<int>();
@@ -76,7 +76,7 @@ namespace AutoHouse
         public void Reconect()
         {
             autoHouse.Clear();
-            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
+            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
             try
             {
                 using (connection)
@@ -94,7 +94,7 @@ namespace AutoHouse
                         string town = reader["town"].ToString();
                         List<Car> carsForSell = new List<Car>();
                         List<Car> rentaCars = new List<Car>();
-                        MySqlConnection connectionCarForSell = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
+                        MySqlConnection connectionCarForSell = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
                         connectionCarForSell.Open();
                         using (connectionCarForSell)
                         {
@@ -125,7 +125,7 @@ namespace AutoHouse
                         }
 
 
-                        MySqlConnection connectionRentaCar = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
+                        MySqlConnection connectionRentaCar = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
                         connectionRentaCar.Open();
                         using (connectionRentaCar)
                         {
@@ -171,9 +171,93 @@ namespace AutoHouse
             }
         }
 
+        private void IfAdmin()
+        {
+            int idUser=0;
+            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
+            try
+            {
+                connection.Open();
+                using (connection)
+                {
+                    MySqlCommand cmd = new MySqlCommand("select permission.id_user from permission where permission.id_user='"+users.Id+"' and(permission.delUser='Y' or permission.viewStatistic='Y' or permission.addCars='Y' or permission.delCars='Y' or permission.delAH='Y');", connection);
+                    MySqlDataReader reader = cmd.ExecuteReader();
+                    if(reader.Read())
+                    {
+                        idUser=int.Parse(reader["id_user"].ToString());
+                        if (idUser == users.Id)
+                        {
+                            btnAdminPanel.Visible = true;
+                        }
+                        else
+                        {
+                            btnAdminPanel.Visible = false;
+                        }
+                    }
+                    else
+                    {
+                        btnAdminPanel.Visible = false;
+                    }
+
+                }
+                connection.Close();
+            }
+            catch (Exception )
+            {
+                btnAdminPanel.Visible = false;
+            }
+        }
+
+        private void IfHeCanRentAndBuy()
+        {
+            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
+            try
+            {
+                connection.Open();
+                using (connection)
+                {
+                    MySqlCommand cmd = new MySqlCommand("select permission.buyCar,permission.rentCar from permission where permission.id_user='"+users.Id +"';", connection);
+                    MySqlDataReader reader = cmd.ExecuteReader();
+                    if (reader.Read())
+                    {
+                        if (reader["buyCar"].ToString()=="Y")
+                        {
+                            btnBuy.Visible = true;
+                        }
+                        else
+                        {
+                            btnBuy.Visible = false;
+                        }
+                        if(reader["rentCar"].ToString() == "Y")
+                        {
+                            btnRent.Visible = true;
+                        }
+                        else
+                        {
+                            btnRent.Visible = false;
+                        }
+                    }
+                    else
+                    {
+                        btnRent.Visible = false;
+                        btnBuy.Visible = false;
+                    }
+                    
+
+                }
+                connection.Close();
+            }
+            catch (Exception)
+            {
+                btnRent.Visible = false;
+                btnBuy.Visible = false;
+            }
+        }
+
         private void Form2_Load(object sender, EventArgs e)
         {
-
+            IfHeCanRentAndBuy();
+            IfAdmin();
             IfOwner();
         }
 
@@ -184,8 +268,67 @@ namespace AutoHouse
 
         private void label1_Click_1(object sender, EventArgs e)
         {
-            Form frm = new View.Form3(users,this);
-            frm.Show();
+            bool flag = false;
+            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
+            try
+            {
+                connection.Open();
+                using (connection)
+                {
+                    MySqlCommand cmd = new MySqlCommand("select permission.addAH from permission where permission.id_user='" + users.Id + "';", connection);
+                    MySqlDataReader reader = cmd.ExecuteReader();
+                    if (reader.Read())
+                    {
+                        if (reader["addAH"].ToString() == "Y")
+                        {
+                            flag = true;
+                        }
+                    }
+                }
+                connection.Close();
+            }
+            catch (Exception)
+            {
+                
+            }
+
+
+            if (flag)
+            {
+                try
+                {
+                    connection.Open();
+                    using (connection)
+                    {
+                        MySqlCommand cmd = new MySqlCommand("select count(autohouses.id) from autohouses where autohouses.id_owner='"+users.Id+"' group by autohouses.id_owner;", connection);
+                        MySqlDataReader reader = cmd.ExecuteReader();
+                        if (reader.Read())
+                        {
+                            if (int.Parse(reader["count(autohouses.id)"].ToString()) < 5)
+                            {
+                                Form frm = new View.Form3(users, this);
+                                frm.Show();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Не можеш да притежаваш повече от 5 автокъщи.","AutoHouse",MessageBoxButtons.OK);
+                            }
+                        }
+                    }
+                    connection.Close();
+                }
+                catch (Exception)
+                {
+
+                }
+            }
+            else
+            {
+                MessageBox.Show("Не можеш да създадеш автокъщам", "AutoHouse", MessageBoxButtons.OK);
+            }
+
+
+            
         }
 
         private void btnLogOut_Click(object sender, EventArgs e)

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form9));
             this.rdRent = new System.Windows.Forms.RadioButton();
             this.rdSell = new System.Windows.Forms.RadioButton();
             this.txtYear = new System.Windows.Forms.TextBox();
@@ -71,9 +72,10 @@
             this.rdRent.AutoSize = true;
             this.rdRent.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 13.8F);
             this.rdRent.ForeColor = System.Drawing.Color.Black;
-            this.rdRent.Location = new System.Drawing.Point(574, 28);
+            this.rdRent.Location = new System.Drawing.Point(430, 23);
+            this.rdRent.Margin = new System.Windows.Forms.Padding(2);
             this.rdRent.Name = "rdRent";
-            this.rdRent.Size = new System.Drawing.Size(107, 32);
+            this.rdRent.Size = new System.Drawing.Size(89, 26);
             this.rdRent.TabIndex = 51;
             this.rdRent.TabStop = true;
             this.rdRent.Text = "For Rent";
@@ -83,11 +85,13 @@
             // rdSell
             // 
             this.rdSell.AutoSize = true;
+            this.rdSell.Checked = true;
             this.rdSell.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 13.8F);
             this.rdSell.ForeColor = System.Drawing.Color.Black;
-            this.rdSell.Location = new System.Drawing.Point(405, 28);
+            this.rdSell.Location = new System.Drawing.Point(304, 23);
+            this.rdSell.Margin = new System.Windows.Forms.Padding(2);
             this.rdSell.Name = "rdSell";
-            this.rdSell.Size = new System.Drawing.Size(101, 32);
+            this.rdSell.Size = new System.Drawing.Size(83, 26);
             this.rdSell.TabIndex = 50;
             this.rdSell.TabStop = true;
             this.rdSell.Text = "For Sell";
@@ -97,10 +101,12 @@
             // txtYear
             // 
             this.txtYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtYear.Location = new System.Drawing.Point(185, 317);
+            this.txtYear.Location = new System.Drawing.Point(139, 258);
+            this.txtYear.Margin = new System.Windows.Forms.Padding(2);
             this.txtYear.Name = "txtYear";
-            this.txtYear.Size = new System.Drawing.Size(160, 30);
+            this.txtYear.Size = new System.Drawing.Size(121, 26);
             this.txtYear.TabIndex = 49;
+            this.txtYear.TextChanged += new System.EventHandler(this.txtYear_TextChanged);
             // 
             // lblYear
             // 
@@ -108,9 +114,10 @@
             this.lblYear.BackColor = System.Drawing.Color.Transparent;
             this.lblYear.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblYear.ForeColor = System.Drawing.Color.Black;
-            this.lblYear.Location = new System.Drawing.Point(61, 315);
+            this.lblYear.Location = new System.Drawing.Point(46, 256);
+            this.lblYear.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblYear.Name = "lblYear";
-            this.lblYear.Size = new System.Drawing.Size(75, 35);
+            this.lblYear.Size = new System.Drawing.Size(60, 28);
             this.lblYear.TabIndex = 48;
             this.lblYear.Text = "Year:";
             // 
@@ -119,9 +126,10 @@
             this.btnAddCar.BackColor = System.Drawing.Color.LightSlateGray;
             this.btnAddCar.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 13.8F);
             this.btnAddCar.ForeColor = System.Drawing.Color.Black;
-            this.btnAddCar.Location = new System.Drawing.Point(993, 444);
+            this.btnAddCar.Location = new System.Drawing.Point(745, 361);
+            this.btnAddCar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddCar.Name = "btnAddCar";
-            this.btnAddCar.Size = new System.Drawing.Size(118, 47);
+            this.btnAddCar.Size = new System.Drawing.Size(88, 38);
             this.btnAddCar.TabIndex = 47;
             this.btnAddCar.Text = "Insert";
             this.btnAddCar.UseVisualStyleBackColor = false;
@@ -132,51 +140,62 @@
             this.lblInsert.AutoSize = true;
             this.lblInsert.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblInsert.ForeColor = System.Drawing.Color.Black;
-            this.lblInsert.Location = new System.Drawing.Point(641, 88);
+            this.lblInsert.Location = new System.Drawing.Point(481, 72);
+            this.lblInsert.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblInsert.Name = "lblInsert";
-            this.lblInsert.Size = new System.Drawing.Size(305, 40);
+            this.lblInsert.Size = new System.Drawing.Size(244, 32);
             this.lblInsert.TabIndex = 37;
             this.lblInsert.Text = "Upload pictures of car:";
             // 
             // txtMileage
             // 
             this.txtMileage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMileage.Location = new System.Drawing.Point(185, 263);
+            this.txtMileage.Location = new System.Drawing.Point(139, 214);
+            this.txtMileage.Margin = new System.Windows.Forms.Padding(2);
             this.txtMileage.Name = "txtMileage";
-            this.txtMileage.Size = new System.Drawing.Size(160, 30);
+            this.txtMileage.Size = new System.Drawing.Size(121, 26);
             this.txtMileage.TabIndex = 36;
+            this.txtMileage.TextChanged += new System.EventHandler(this.txtMileage_TextChanged);
             // 
             // txtPrice
             // 
             this.txtPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrice.Location = new System.Drawing.Point(185, 209);
+            this.txtPrice.Location = new System.Drawing.Point(139, 170);
+            this.txtPrice.Margin = new System.Windows.Forms.Padding(2);
             this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(160, 30);
+            this.txtPrice.Size = new System.Drawing.Size(121, 26);
             this.txtPrice.TabIndex = 35;
+            this.txtPrice.TextChanged += new System.EventHandler(this.txtPrice_TextChanged);
             // 
             // txtColor
             // 
             this.txtColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtColor.Location = new System.Drawing.Point(185, 147);
+            this.txtColor.Location = new System.Drawing.Point(139, 119);
+            this.txtColor.Margin = new System.Windows.Forms.Padding(2);
             this.txtColor.Name = "txtColor";
-            this.txtColor.Size = new System.Drawing.Size(160, 30);
+            this.txtColor.Size = new System.Drawing.Size(121, 26);
             this.txtColor.TabIndex = 34;
+            this.txtColor.TextChanged += new System.EventHandler(this.txtColor_TextChanged);
             // 
             // txtModel
             // 
             this.txtModel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtModel.Location = new System.Drawing.Point(185, 88);
+            this.txtModel.Location = new System.Drawing.Point(139, 72);
+            this.txtModel.Margin = new System.Windows.Forms.Padding(2);
             this.txtModel.Name = "txtModel";
-            this.txtModel.Size = new System.Drawing.Size(160, 30);
+            this.txtModel.Size = new System.Drawing.Size(121, 26);
             this.txtModel.TabIndex = 33;
+            this.txtModel.TextChanged += new System.EventHandler(this.txtModel_TextChanged);
             // 
             // txtBrand
             // 
             this.txtBrand.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBrand.Location = new System.Drawing.Point(185, 24);
+            this.txtBrand.Location = new System.Drawing.Point(139, 20);
+            this.txtBrand.Margin = new System.Windows.Forms.Padding(2);
             this.txtBrand.Name = "txtBrand";
-            this.txtBrand.Size = new System.Drawing.Size(160, 30);
+            this.txtBrand.Size = new System.Drawing.Size(121, 26);
             this.txtBrand.TabIndex = 32;
+            this.txtBrand.TextChanged += new System.EventHandler(this.txtBrand_TextChanged);
             // 
             // lblMileage
             // 
@@ -184,9 +203,10 @@
             this.lblMileage.BackColor = System.Drawing.Color.Transparent;
             this.lblMileage.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMileage.ForeColor = System.Drawing.Color.Black;
-            this.lblMileage.Location = new System.Drawing.Point(19, 261);
+            this.lblMileage.Location = new System.Drawing.Point(14, 212);
+            this.lblMileage.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMileage.Name = "lblMileage";
-            this.lblMileage.Size = new System.Drawing.Size(115, 35);
+            this.lblMileage.Size = new System.Drawing.Size(91, 28);
             this.lblMileage.TabIndex = 31;
             this.lblMileage.Text = "Mileage:";
             // 
@@ -196,9 +216,10 @@
             this.lblPrice.BackColor = System.Drawing.Color.Transparent;
             this.lblPrice.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPrice.ForeColor = System.Drawing.Color.Black;
-            this.lblPrice.Location = new System.Drawing.Point(55, 207);
+            this.lblPrice.Location = new System.Drawing.Point(41, 168);
+            this.lblPrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPrice.Name = "lblPrice";
-            this.lblPrice.Size = new System.Drawing.Size(79, 35);
+            this.lblPrice.Size = new System.Drawing.Size(63, 28);
             this.lblPrice.TabIndex = 30;
             this.lblPrice.Text = "Price:";
             // 
@@ -208,9 +229,10 @@
             this.lblColor.BackColor = System.Drawing.Color.Transparent;
             this.lblColor.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblColor.ForeColor = System.Drawing.Color.Black;
-            this.lblColor.Location = new System.Drawing.Point(51, 145);
+            this.lblColor.Location = new System.Drawing.Point(38, 118);
+            this.lblColor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblColor.Name = "lblColor";
-            this.lblColor.Size = new System.Drawing.Size(82, 35);
+            this.lblColor.Size = new System.Drawing.Size(66, 28);
             this.lblColor.TabIndex = 29;
             this.lblColor.Text = "Color:";
             // 
@@ -220,9 +242,10 @@
             this.lblModel.BackColor = System.Drawing.Color.Transparent;
             this.lblModel.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblModel.ForeColor = System.Drawing.Color.Black;
-            this.lblModel.Location = new System.Drawing.Point(41, 86);
+            this.lblModel.Location = new System.Drawing.Point(31, 70);
+            this.lblModel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblModel.Name = "lblModel";
-            this.lblModel.Size = new System.Drawing.Size(94, 35);
+            this.lblModel.Size = new System.Drawing.Size(75, 28);
             this.lblModel.TabIndex = 28;
             this.lblModel.Text = "Model:";
             // 
@@ -232,9 +255,10 @@
             this.lblBrand.BackColor = System.Drawing.Color.Transparent;
             this.lblBrand.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBrand.ForeColor = System.Drawing.Color.Black;
-            this.lblBrand.Location = new System.Drawing.Point(43, 18);
+            this.lblBrand.Location = new System.Drawing.Point(32, 15);
+            this.lblBrand.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblBrand.Name = "lblBrand";
-            this.lblBrand.Size = new System.Drawing.Size(90, 35);
+            this.lblBrand.Size = new System.Drawing.Size(72, 28);
             this.lblBrand.TabIndex = 27;
             this.lblBrand.Text = "Brand:";
             // 
@@ -243,9 +267,10 @@
             this.btnBack.BackColor = System.Drawing.Color.LightSlateGray;
             this.btnBack.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 13.8F);
             this.btnBack.ForeColor = System.Drawing.Color.Black;
-            this.btnBack.Location = new System.Drawing.Point(12, 444);
+            this.btnBack.Location = new System.Drawing.Point(9, 361);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(2);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(118, 47);
+            this.btnBack.Size = new System.Drawing.Size(88, 38);
             this.btnBack.TabIndex = 52;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = false;
@@ -253,81 +278,91 @@
             // 
             // comboBoxAutoHouses
             // 
-            this.comboBoxAutoHouses.ForeColor = System.Drawing.Color.LightSlateGray;
+            this.comboBoxAutoHouses.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.comboBoxAutoHouses.FormattingEnabled = true;
-            this.comboBoxAutoHouses.Location = new System.Drawing.Point(811, 27);
+            this.comboBoxAutoHouses.Location = new System.Drawing.Point(608, 22);
+            this.comboBoxAutoHouses.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxAutoHouses.Name = "comboBoxAutoHouses";
-            this.comboBoxAutoHouses.Size = new System.Drawing.Size(121, 24);
+            this.comboBoxAutoHouses.Size = new System.Drawing.Size(92, 21);
             this.comboBoxAutoHouses.TabIndex = 53;
+            this.comboBoxAutoHouses.SelectedIndexChanged += new System.EventHandler(this.comboBoxAutoHouses_SelectedIndexChanged);
             // 
             // pictureBox9
             // 
-            this.pictureBox9.Location = new System.Drawing.Point(869, 245);
+            this.pictureBox9.Location = new System.Drawing.Point(652, 199);
+            this.pictureBox9.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(118, 98);
+            this.pictureBox9.Size = new System.Drawing.Size(88, 80);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox9.TabIndex = 46;
             this.pictureBox9.TabStop = false;
             // 
             // pictureBox8
             // 
-            this.pictureBox8.Location = new System.Drawing.Point(745, 245);
+            this.pictureBox8.Location = new System.Drawing.Point(559, 199);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(118, 98);
+            this.pictureBox8.Size = new System.Drawing.Size(88, 80);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox8.TabIndex = 45;
             this.pictureBox8.TabStop = false;
             // 
             // pictureBox7
             // 
-            this.pictureBox7.Location = new System.Drawing.Point(621, 245);
+            this.pictureBox7.Location = new System.Drawing.Point(466, 199);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(118, 98);
+            this.pictureBox7.Size = new System.Drawing.Size(88, 80);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox7.TabIndex = 44;
             this.pictureBox7.TabStop = false;
             // 
             // pictureBox6
             // 
-            this.pictureBox6.Location = new System.Drawing.Point(993, 141);
+            this.pictureBox6.Location = new System.Drawing.Point(745, 115);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(118, 98);
+            this.pictureBox6.Size = new System.Drawing.Size(88, 80);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox6.TabIndex = 43;
             this.pictureBox6.TabStop = false;
             // 
             // pictureBox5
             // 
-            this.pictureBox5.Location = new System.Drawing.Point(869, 141);
+            this.pictureBox5.Location = new System.Drawing.Point(652, 115);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(118, 98);
+            this.pictureBox5.Size = new System.Drawing.Size(88, 80);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 42;
             this.pictureBox5.TabStop = false;
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Location = new System.Drawing.Point(745, 141);
+            this.pictureBox4.Location = new System.Drawing.Point(559, 115);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(118, 98);
+            this.pictureBox4.Size = new System.Drawing.Size(88, 80);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 41;
             this.pictureBox4.TabStop = false;
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Location = new System.Drawing.Point(621, 141);
+            this.pictureBox3.Location = new System.Drawing.Point(466, 115);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(118, 98);
+            this.pictureBox3.Size = new System.Drawing.Size(88, 80);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 40;
             this.pictureBox3.TabStop = false;
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(380, 78);
+            this.pictureBox2.Location = new System.Drawing.Point(285, 63);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(235, 265);
+            this.pictureBox2.Size = new System.Drawing.Size(176, 215);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 39;
             this.pictureBox2.TabStop = false;
@@ -336,9 +371,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::AutoHouse.Properties.Resources.nazad;
-            this.pictureBox1.Location = new System.Drawing.Point(961, 88);
+            this.pictureBox1.Location = new System.Drawing.Point(721, 72);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(65, 38);
+            this.pictureBox1.Size = new System.Drawing.Size(49, 31);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 38;
             this.pictureBox1.TabStop = false;
@@ -346,10 +382,10 @@
             // 
             // Form9
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.RoyalBlue;
-            this.ClientSize = new System.Drawing.Size(1132, 503);
+            this.ClientSize = new System.Drawing.Size(849, 409);
             this.Controls.Add(this.comboBoxAutoHouses);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.rdRent);
@@ -378,8 +414,11 @@
             this.Controls.Add(this.lblModel);
             this.Controls.Add(this.lblBrand);
             this.ForeColor = System.Drawing.Color.LightSlateGray;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form9";
-            this.Text = "Form9";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Add car";
             this.Load += new System.EventHandler(this.Form9_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();

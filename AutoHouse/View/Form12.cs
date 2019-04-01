@@ -45,7 +45,7 @@ namespace AutoHouse.View
             this.car = car;
             this.autoHouses = autoHouses;
             images.Add(car.Pic);
-            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
+            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
             using (connection)
             {
                 connection.Open();
@@ -68,6 +68,7 @@ namespace AutoHouse.View
 
         private void Form12_Load(object sender, EventArgs e)
         {
+            this.MaximizeBox = false;
             pictureBoxes.Add(pictureBoxImage1);
             pictureBoxes.Add(pictureBoxImage2);
             pictureBoxes.Add(pictureBoxImage3);
@@ -109,7 +110,7 @@ namespace AutoHouse.View
         {
             try
             {
-                MySqlConnection connectionStatistic = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
+                MySqlConnection connectionStatistic = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
                 connectionStatistic.Open();
                 using (connectionStatistic)
                 {
@@ -145,7 +146,7 @@ namespace AutoHouse.View
 
             
 
-            MessageBox.Show("Vie si naehte kola");
+            MessageBox.Show("Successfully rent this car!");
             btnRent.Visible = false;
         }
 

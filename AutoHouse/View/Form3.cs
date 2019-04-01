@@ -13,6 +13,7 @@ namespace AutoHouse.View
 {
     public partial class Form3 : Form
     {
+        bool flag=true;
         Users users;
         Form2 form2;
 
@@ -29,7 +30,8 @@ namespace AutoHouse.View
 
         private void Form3_Load(object sender, EventArgs e)
         {
-            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
+            this.MaximizeBox = false;
+            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
             connection.Open();
             using (connection)
             {
@@ -52,55 +54,94 @@ namespace AutoHouse.View
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
-            connection.Open();
-            using (connection)
+            if(txtAdress.Text=="" || txtName.Text=="" || txtTown.Text=="")
             {
-                MySqlCommand cmd = new MySqlCommand("INSERT INTO autohouses (name,adress,town,id_owner) VALUES (@name,@adress,@town,@id_owner)", connection);
-
-                cmd.Parameters.AddWithValue("@adress", txtAdress.Text);
-                cmd.Parameters.AddWithValue("@name",txtName.Text);
-                cmd.Parameters.AddWithValue("@town", txtTown.Text);
-                cmd.Parameters.AddWithValue("@id_owner", users.Id);
-
-                cmd.ExecuteNonQuery();
+                flag = true;
             }
-            connection.Close();
-
-            
-            connection.Open();
-            using (connection)
+            if (flag)
             {
-                MySqlCommand sqlcomAH = new MySqlCommand("select autohouses.id from autohouses where autohouses.name='"+ txtName.Text + "' and autohouses.adress='"+ txtAdress.Text + "' and autohouses.town = '"+ txtTown.Text + "' and autohouses.id_owner='"+ users.Id+"';", connection);
-
-                MySqlDataReader readerAH = sqlcomAH.ExecuteReader();
-
-                if(readerAH.Read())
-                {
-                    idAH = int.Parse(readerAH["id"].ToString());
-                }
+                MessageBox.Show("Please enter valid information");
             }
-            connection.Close();
-
-            MySqlConnection connectionUserAH = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
-            connectionUserAH.Open();
-            using (connectionUserAH)
+            else
             {
-                
-                for (int i = 0; i < idUser.Count; i++)
+                MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
+                connection.Open();
+                using (connection)
                 {
-                    MySqlCommand cmd = new MySqlCommand("insert into users_ah (id_users,id_ah) values(@id_users,@id_ah);", connectionUserAH);
-                    cmd.Parameters.AddWithValue("@id_users", idUser[i]);
-                    cmd.Parameters.AddWithValue("@id_ah",idAH );
+                    MySqlCommand cmd = new MySqlCommand("INSERT INTO autohouses (name,adress,town,id_owner) VALUES (@name,@adress,@town,@id_owner)", connection);
+
+                    cmd.Parameters.AddWithValue("@adress", txtAdress.Text);
+                    cmd.Parameters.AddWithValue("@name", txtName.Text);
+                    cmd.Parameters.AddWithValue("@town", txtTown.Text);
+                    cmd.Parameters.AddWithValue("@id_owner", users.Id);
+
                     cmd.ExecuteNonQuery();
                 }
-                
+                connection.Close();
 
-                
+
+                connection.Open();
+                using (connection)
+                {
+                    MySqlCommand sqlcomAH = new MySqlCommand("select autohouses.id from autohouses where autohouses.name='" + txtName.Text + "' and autohouses.adress='" + txtAdress.Text + "' and autohouses.town = '" + txtTown.Text + "' and autohouses.id_owner='" + users.Id + "';", connection);
+
+                    MySqlDataReader readerAH = sqlcomAH.ExecuteReader();
+
+                    if (readerAH.Read())
+                    {
+                        idAH = int.Parse(readerAH["id"].ToString());
+                    }
+                }
+                connection.Close();
+
+                MySqlConnection connectionUserAH = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
+                connectionUserAH.Open();
+                using (connectionUserAH)
+                {
+
+                    for (int i = 0; i < idUser.Count; i++)
+                    {
+                        MySqlCommand cmd = new MySqlCommand("insert into users_ah (id_users,id_ah) values(@id_users,@id_ah);", connectionUserAH);
+                        cmd.Parameters.AddWithValue("@id_users", idUser[i]);
+                        cmd.Parameters.AddWithValue("@id_ah", idAH);
+                        cmd.ExecuteNonQuery();
+                    }
+
+
+
+                }
+                connection.Close();
+                MessageBox.Show("You successfully create autohouse");
+                form2.Reconect();
             }
-            connection.Close();
-            MessageBox.Show("Uspeshno si napravihte avtokushta");
-            form2.Reconect();
+
+        }
+
+        private void txtName_TextChanged(object sender, EventArgs e)
+        {
+            if (txtName.Text == "")
+            {
+                flag = true;
+            }
+            else flag = false;
+        }
+
+        private void txtAdress_TextChanged(object sender, EventArgs e)
+        {
+            if (txtAdress.Text == "")
+            {
+                flag = true;
+            }
+            else flag = false;
+        }
+
+        private void txtTown_TextChanged(object sender, EventArgs e)
+        {
+            if (txtTown.Text == "")
+            {
+                flag = true;
+            }
+            else flag = false;
         }
     }
 }

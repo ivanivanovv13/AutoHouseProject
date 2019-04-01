@@ -40,7 +40,7 @@ namespace AutoHouse
 
         public void IfOwner()
         {
-            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
+            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
             try
             {
                 List<int> idAH = new List<int>();
@@ -76,7 +76,7 @@ namespace AutoHouse
         public void Reconect()
         {
             autoHouse.Clear();
-            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
+            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
             try
             {
                 using (connection)
@@ -94,7 +94,7 @@ namespace AutoHouse
                         string town = reader["town"].ToString();
                         List<Car> carsForSell = new List<Car>();
                         List<Car> rentaCars = new List<Car>();
-                        MySqlConnection connectionCarForSell = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
+                        MySqlConnection connectionCarForSell = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
                         connectionCarForSell.Open();
                         using (connectionCarForSell)
                         {
@@ -125,7 +125,7 @@ namespace AutoHouse
                         }
 
 
-                        MySqlConnection connectionRentaCar = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
+                        MySqlConnection connectionRentaCar = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
                         connectionRentaCar.Open();
                         using (connectionRentaCar)
                         {
@@ -174,7 +174,7 @@ namespace AutoHouse
         private void IfAdmin()
         {
             int idUser=0;
-            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
+            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
             try
             {
                 connection.Open();
@@ -210,7 +210,7 @@ namespace AutoHouse
 
         private void IfHeCanRentAndBuy()
         {
-            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
+            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
             try
             {
                 connection.Open();
@@ -256,6 +256,7 @@ namespace AutoHouse
 
         private void Form2_Load(object sender, EventArgs e)
         {
+            this.MaximizeBox = false;
             IfHeCanRentAndBuy();
             IfAdmin();
             IfOwner();
@@ -269,7 +270,7 @@ namespace AutoHouse
         private void label1_Click_1(object sender, EventArgs e)
         {
             bool flag = false;
-            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
+            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
             try
             {
                 connection.Open();
@@ -311,7 +312,7 @@ namespace AutoHouse
                             }
                             else
                             {
-                                MessageBox.Show("Не можеш да притежаваш повече от 5 автокъщи.","AutoHouse",MessageBoxButtons.OK);
+                                MessageBox.Show("You can't have more then 5 autohouses","AutoHouse",MessageBoxButtons.OK);
                             }
                         }
                     }
@@ -324,7 +325,7 @@ namespace AutoHouse
             }
             else
             {
-                MessageBox.Show("Не можеш да създадеш автокъщам", "AutoHouse", MessageBoxButtons.OK);
+                MessageBox.Show("You can't add autohouse", "AutoHouse", MessageBoxButtons.OK);
             }
 
 

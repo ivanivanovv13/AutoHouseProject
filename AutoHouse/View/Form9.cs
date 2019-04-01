@@ -15,7 +15,7 @@ namespace AutoHouse.View
 {
     public partial class Form9 : Form
     {
-        bool flag = false;
+        bool flag = true,exep=false;
         int picnumber = 1, idAh, id;
         string ahName;
         Car obj = new Car();
@@ -33,7 +33,7 @@ namespace AutoHouse.View
         Thread myth;
         public void AddCar()
         {
-            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
+            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
             connection.Open();
             using (connection)
             {
@@ -64,7 +64,7 @@ namespace AutoHouse.View
         public void Rent()
         {
 
-            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
+            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
             connection.Open();
             using (connection)
             {
@@ -91,7 +91,7 @@ namespace AutoHouse.View
         public void Buy()
         {
 
-            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
+            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
             connection.Open();
             using (connection)
             {
@@ -116,7 +116,7 @@ namespace AutoHouse.View
         }
         public void insertPic(Image pic)
         {
-            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
+            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
             connection.Open();
             using (connection)
             {
@@ -131,7 +131,7 @@ namespace AutoHouse.View
         public int GetCarID()
         {
 
-            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
+            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
 
             using (connection)
             {
@@ -180,6 +180,7 @@ namespace AutoHouse.View
 
         private void Form9_Load(object sender, EventArgs e)
         {
+            this.MaximizeBox = false;
             if (autoHouse.Count > 1)
             {
                 comboBoxAutoHouses.Show();
@@ -247,15 +248,27 @@ namespace AutoHouse.View
 
         private void btnAddCar_Click(object sender, EventArgs e)
         {
+            if (txtBrand.Text=="" || txtModel.Text == "" || txtColor.Text == "" || txtPrice.Text== "" || txtYear.Text=="" || txtMileage.Text=="")
+            {
+                flag = true;
+            }
             if (flag)
             {
-                MessageBox.Show("Please enter all information");
+                MessageBox.Show("Please enter valid information");
             }
-            else
+            else 
             {
-                MessageBox.Show("You successfully inserted car");
-                AddCar();
-                GetPic();
+                try
+                {
+                    AddCar();
+                    GetPic();
+                }
+                catch(Exception)
+                {
+                    MessageBox.Show("Please enter valid information");
+                }
+               
+
                 foreach (var item in pics)
                 {
                     if (item != null)
@@ -264,22 +277,48 @@ namespace AutoHouse.View
 
                 if (rdSell.Checked)
                 {
-                    Buy();
+                    try
+                    {
+                        Buy();
+                        exep = true;
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Please enter valid information");
+                        exep = false;
+                    }
                 }
                 else
                 {
-                    Rent();
+                    try
+                    {
+                        Rent();
+                        exep = true;
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Please enter valid information");
+                        exep = false;
+                    }
                 }
-                txtModel.Clear();
-                txtBrand.Clear();
-                txtColor.Clear();
-                txtYear.Clear();
-                txtMileage.Clear();
-                txtPrice.Clear();
-                pictureBox2.Image = null;
-                pictureBox3.Image = null;
-                pictureBox4.Image = null;
-                pictureBox5.Image = null;
+                if (exep)
+                {
+                    txtModel.Clear();
+                    txtBrand.Clear();
+                    txtColor.Clear();
+                    txtYear.Clear();
+                    txtMileage.Clear();
+                    txtPrice.Clear();
+                    pictureBox2.Image = null;
+                    pictureBox3.Image = null;
+                    pictureBox4.Image = null;
+                    pictureBox5.Image = null;
+                    pictureBox6.Image = null;
+                    pictureBox7.Image = null;
+                    pictureBox8.Image = null;
+                    pictureBox9.Image = null;
+                    MessageBox.Show("You successfully inserted car");
+                }
             }
         }
 
@@ -289,6 +328,65 @@ namespace AutoHouse.View
         }
 
         private void rdSell_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtBrand_TextChanged(object sender, EventArgs e)
+        {
+            if (txtBrand.Text == "")
+            {
+                flag = true;
+            }
+            else flag = false;
+        }
+
+        private void txtModel_TextChanged(object sender, EventArgs e)
+        {
+            if (txtModel.Text == "")
+            {
+                flag = true;
+            }
+            else flag = false;
+        }
+
+        private void txtColor_TextChanged(object sender, EventArgs e)
+        {
+            if (txtColor.Text == "")
+            {
+                flag = true;
+            }
+            else flag = false;
+        }
+
+        private void txtPrice_TextChanged(object sender, EventArgs e)
+        {
+            if (System.Text.RegularExpressions.Regex.IsMatch(txtPrice.Text, "[^0-9]"))
+            {
+                flag = true;
+            }
+            else flag=false;
+        }
+
+        private void txtMileage_TextChanged(object sender, EventArgs e)
+        {
+            if (System.Text.RegularExpressions.Regex.IsMatch(txtMileage.Text, "[^0-9]"))
+            {
+                flag = true;
+            }
+            else flag = false;
+        }
+
+        private void txtYear_TextChanged(object sender, EventArgs e)
+        {
+            if (System.Text.RegularExpressions.Regex.IsMatch(txtYear.Text, "[^0-9]"))
+            {
+                flag = true;
+            }
+            else flag = false;
+        }
+
+        private void comboBoxAutoHouses_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form7));
             this.listBoxStatistic = new System.Windows.Forms.ListBox();
             this.radioBtnRentaCarStatistic = new System.Windows.Forms.RadioButton();
             this.radioBtnSellCarsStatistic = new System.Windows.Forms.RadioButton();
@@ -41,21 +42,21 @@
             // 
             this.listBoxStatistic.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.listBoxStatistic.FormattingEnabled = true;
-            this.listBoxStatistic.ItemHeight = 29;
-            this.listBoxStatistic.Location = new System.Drawing.Point(12, 167);
-            this.listBoxStatistic.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.listBoxStatistic.ItemHeight = 22;
+            this.listBoxStatistic.Location = new System.Drawing.Point(9, 136);
+            this.listBoxStatistic.Margin = new System.Windows.Forms.Padding(2);
             this.listBoxStatistic.Name = "listBoxStatistic";
-            this.listBoxStatistic.Size = new System.Drawing.Size(1261, 497);
+            this.listBoxStatistic.Size = new System.Drawing.Size(947, 400);
             this.listBoxStatistic.TabIndex = 0;
             // 
             // radioBtnRentaCarStatistic
             // 
             this.radioBtnRentaCarStatistic.AutoSize = true;
             this.radioBtnRentaCarStatistic.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioBtnRentaCarStatistic.Location = new System.Drawing.Point(342, 62);
-            this.radioBtnRentaCarStatistic.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.radioBtnRentaCarStatistic.Location = new System.Drawing.Point(256, 50);
+            this.radioBtnRentaCarStatistic.Margin = new System.Windows.Forms.Padding(2);
             this.radioBtnRentaCarStatistic.Name = "radioBtnRentaCarStatistic";
-            this.radioBtnRentaCarStatistic.Size = new System.Drawing.Size(152, 37);
+            this.radioBtnRentaCarStatistic.Size = new System.Drawing.Size(118, 30);
             this.radioBtnRentaCarStatistic.TabIndex = 1;
             this.radioBtnRentaCarStatistic.TabStop = true;
             this.radioBtnRentaCarStatistic.Text = "Renta cars ";
@@ -65,10 +66,10 @@
             // 
             this.radioBtnSellCarsStatistic.AutoSize = true;
             this.radioBtnSellCarsStatistic.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioBtnSellCarsStatistic.Location = new System.Drawing.Point(526, 62);
-            this.radioBtnSellCarsStatistic.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.radioBtnSellCarsStatistic.Location = new System.Drawing.Point(394, 50);
+            this.radioBtnSellCarsStatistic.Margin = new System.Windows.Forms.Padding(2);
             this.radioBtnSellCarsStatistic.Name = "radioBtnSellCarsStatistic";
-            this.radioBtnSellCarsStatistic.Size = new System.Drawing.Size(124, 37);
+            this.radioBtnSellCarsStatistic.Size = new System.Drawing.Size(97, 30);
             this.radioBtnSellCarsStatistic.TabIndex = 2;
             this.radioBtnSellCarsStatistic.TabStop = true;
             this.radioBtnSellCarsStatistic.Text = "Sell cars";
@@ -78,10 +79,10 @@
             // 
             this.radioBtnVsichkiStatistic.AutoSize = true;
             this.radioBtnVsichkiStatistic.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioBtnVsichkiStatistic.Location = new System.Drawing.Point(679, 62);
-            this.radioBtnVsichkiStatistic.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.radioBtnVsichkiStatistic.Location = new System.Drawing.Point(509, 50);
+            this.radioBtnVsichkiStatistic.Margin = new System.Windows.Forms.Padding(2);
             this.radioBtnVsichkiStatistic.Name = "radioBtnVsichkiStatistic";
-            this.radioBtnVsichkiStatistic.Size = new System.Drawing.Size(115, 37);
+            this.radioBtnVsichkiStatistic.Size = new System.Drawing.Size(90, 30);
             this.radioBtnVsichkiStatistic.TabIndex = 3;
             this.radioBtnVsichkiStatistic.TabStop = true;
             this.radioBtnVsichkiStatistic.Text = "All cars";
@@ -90,10 +91,10 @@
             // btnPrintStatistic
             // 
             this.btnPrintStatistic.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPrintStatistic.Location = new System.Drawing.Point(814, 60);
-            this.btnPrintStatistic.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnPrintStatistic.Location = new System.Drawing.Point(610, 49);
+            this.btnPrintStatistic.Margin = new System.Windows.Forms.Padding(2);
             this.btnPrintStatistic.Name = "btnPrintStatistic";
-            this.btnPrintStatistic.Size = new System.Drawing.Size(181, 39);
+            this.btnPrintStatistic.Size = new System.Drawing.Size(136, 32);
             this.btnPrintStatistic.TabIndex = 4;
             this.btnPrintStatistic.Text = "Show Statistic";
             this.btnPrintStatistic.UseVisualStyleBackColor = true;
@@ -102,19 +103,19 @@
             // comboBoxAutoHouse
             // 
             this.comboBoxAutoHouse.FormattingEnabled = true;
-            this.comboBoxAutoHouse.Location = new System.Drawing.Point(63, 68);
-            this.comboBoxAutoHouse.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBoxAutoHouse.Location = new System.Drawing.Point(47, 55);
             this.comboBoxAutoHouse.Name = "comboBoxAutoHouse";
-            this.comboBoxAutoHouse.Size = new System.Drawing.Size(160, 24);
+            this.comboBoxAutoHouse.Size = new System.Drawing.Size(121, 21);
             this.comboBoxAutoHouse.TabIndex = 5;
             this.comboBoxAutoHouse.Text = "Избери автокъща.";
             // 
             // btnBack
             // 
             this.btnBack.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(1112, 42);
+            this.btnBack.Location = new System.Drawing.Point(834, 34);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(2);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(208, 66);
+            this.btnBack.Size = new System.Drawing.Size(156, 54);
             this.btnBack.TabIndex = 14;
             this.btnBack.Text = "GoBack";
             this.btnBack.UseVisualStyleBackColor = true;
@@ -122,10 +123,10 @@
             // 
             // Form7
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.RoyalBlue;
-            this.ClientSize = new System.Drawing.Size(1332, 698);
+            this.ClientSize = new System.Drawing.Size(999, 567);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.comboBoxAutoHouse);
             this.Controls.Add(this.btnPrintStatistic);
@@ -133,9 +134,11 @@
             this.Controls.Add(this.radioBtnSellCarsStatistic);
             this.Controls.Add(this.radioBtnRentaCarStatistic);
             this.Controls.Add(this.listBoxStatistic);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form7";
-            this.Text = "Form7";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Statistic";
             this.Load += new System.EventHandler(this.Form7_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

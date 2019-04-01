@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form6));
             this.btnStatistic = new System.Windows.Forms.Button();
             this.btnAddCar = new System.Windows.Forms.Button();
             this.btnRemoveCar = new System.Windows.Forms.Button();
@@ -88,7 +89,7 @@
             // 
             // Form6
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.RoyalBlue;
             this.ClientSize = new System.Drawing.Size(1073, 495);
@@ -97,9 +98,11 @@
             this.Controls.Add(this.btnAddCar);
             this.Controls.Add(this.btnStatistic);
             this.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Form6";
-            this.Text = "Form6";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Your autohouse";
             this.Load += new System.EventHandler(this.Form6_Load);
             this.ResumeLayout(false);
 

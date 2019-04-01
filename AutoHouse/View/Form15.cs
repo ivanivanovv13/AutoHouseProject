@@ -31,6 +31,7 @@ namespace AutoHouse.View
 
         private void Form15_Load(object sender, EventArgs e)
         {
+            this.MaximizeBox = false;
             if (autoHouses.Count() > 1)
             {
                 comboBoxAutoHouse.Show();
@@ -103,7 +104,7 @@ namespace AutoHouse.View
                     try
                     {
                         int index = listBoxCars.SelectedIndex;
-                        MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
+                        MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
 
                         MySqlCommand sqlcom = new MySqlCommand("DELETE FROM carforsell WHERE carforsell.id_car = '" + autoHouses[comboBoxAutoHouse.SelectedIndex].CarsForSell[index].Id + "' LIMIT 1", connection);
                         MySqlDataReader MyReader2;
@@ -131,7 +132,7 @@ namespace AutoHouse.View
                         int index = listBoxCars.SelectedIndex;
                         if (index < 0)
                             index = 0;
-                        MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
+                        MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
                         MySqlCommand sqlcom = new MySqlCommand("DELETE FROM rent_car WHERE rent_car.id_cars = '" + autoHouses[comboBoxAutoHouse.SelectedIndex].RentaCars[index].Id + "' LIMIT 1", connection);
                         MySqlDataReader MyReader2;
                         connection.Open();

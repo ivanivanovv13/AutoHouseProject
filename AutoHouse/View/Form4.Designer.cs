@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form4));
             this.lblChose = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblAH1 = new System.Windows.Forms.Label();
@@ -63,10 +64,9 @@
             this.lblChose.BackColor = System.Drawing.Color.Transparent;
             this.lblChose.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 20F);
             this.lblChose.ForeColor = System.Drawing.Color.Black;
-            this.lblChose.Location = new System.Drawing.Point(84, 79);
-            this.lblChose.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblChose.Location = new System.Drawing.Point(63, 64);
             this.lblChose.Name = "lblChose";
-            this.lblChose.Size = new System.Drawing.Size(260, 40);
+            this.lblChose.Size = new System.Drawing.Size(211, 32);
             this.lblChose.TabIndex = 0;
             this.lblChose.Text = "Choose auto house:";
             this.lblChose.Click += new System.EventHandler(this.lblChose_Click);
@@ -77,10 +77,9 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 20F);
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(700, 79);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(525, 64);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(161, 40);
+            this.label1.Size = new System.Drawing.Size(131, 32);
             this.label1.TabIndex = 1;
             this.label1.Text = "Choose car:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -91,10 +90,9 @@
             this.lblAH1.BackColor = System.Drawing.Color.Transparent;
             this.lblAH1.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 13.8F);
             this.lblAH1.ForeColor = System.Drawing.Color.Black;
-            this.lblAH1.Location = new System.Drawing.Point(16, 188);
-            this.lblAH1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblAH1.Location = new System.Drawing.Point(12, 153);
             this.lblAH1.Name = "lblAH1";
-            this.lblAH1.Size = new System.Drawing.Size(68, 28);
+            this.lblAH1.Size = new System.Drawing.Size(55, 22);
             this.lblAH1.TabIndex = 2;
             this.lblAH1.Text = "label2";
             this.lblAH1.Click += new System.EventHandler(this.lblAH1_Click);
@@ -105,10 +103,9 @@
             this.lblAH3.BackColor = System.Drawing.Color.Transparent;
             this.lblAH3.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 13.8F);
             this.lblAH3.ForeColor = System.Drawing.Color.Black;
-            this.lblAH3.Location = new System.Drawing.Point(16, 331);
-            this.lblAH3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblAH3.Location = new System.Drawing.Point(12, 269);
             this.lblAH3.Name = "lblAH3";
-            this.lblAH3.Size = new System.Drawing.Size(68, 28);
+            this.lblAH3.Size = new System.Drawing.Size(55, 22);
             this.lblAH3.TabIndex = 3;
             this.lblAH3.Text = "label2";
             this.lblAH3.Click += new System.EventHandler(this.lblAH3_Click);
@@ -119,10 +116,9 @@
             this.lblAH2.BackColor = System.Drawing.Color.Transparent;
             this.lblAH2.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 13.8F);
             this.lblAH2.ForeColor = System.Drawing.Color.Black;
-            this.lblAH2.Location = new System.Drawing.Point(16, 255);
-            this.lblAH2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblAH2.Location = new System.Drawing.Point(12, 207);
             this.lblAH2.Name = "lblAH2";
-            this.lblAH2.Size = new System.Drawing.Size(68, 28);
+            this.lblAH2.Size = new System.Drawing.Size(55, 22);
             this.lblAH2.TabIndex = 4;
             this.lblAH2.Text = "label2";
             this.lblAH2.Click += new System.EventHandler(this.lblAH2_Click);
@@ -133,10 +129,9 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 13.8F);
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(16, 399);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(12, 324);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(68, 28);
+            this.label4.Size = new System.Drawing.Size(55, 22);
             this.label4.TabIndex = 5;
             this.label4.Text = "label2";
             this.label4.Click += new System.EventHandler(this.label4_Click);
@@ -147,10 +142,9 @@
             this.lblAH5.BackColor = System.Drawing.Color.Transparent;
             this.lblAH5.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 13.8F);
             this.lblAH5.ForeColor = System.Drawing.Color.Black;
-            this.lblAH5.Location = new System.Drawing.Point(16, 475);
-            this.lblAH5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblAH5.Location = new System.Drawing.Point(12, 386);
             this.lblAH5.Name = "lblAH5";
-            this.lblAH5.Size = new System.Drawing.Size(68, 28);
+            this.lblAH5.Size = new System.Drawing.Size(55, 22);
             this.lblAH5.TabIndex = 6;
             this.lblAH5.Text = "label2";
             this.lblAH5.Click += new System.EventHandler(this.lblAH5_Click);
@@ -161,10 +155,9 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 13.8F);
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(889, 204);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(667, 166);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 28);
+            this.label2.Size = new System.Drawing.Size(55, 22);
             this.label2.TabIndex = 12;
             this.label2.Text = "label2";
             this.label2.Visible = false;
@@ -176,10 +169,9 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 13.8F);
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(889, 302);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(667, 245);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(68, 28);
+            this.label3.Size = new System.Drawing.Size(55, 22);
             this.label3.TabIndex = 13;
             this.label3.Text = "label3";
             this.label3.Visible = false;
@@ -191,10 +183,9 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 13.8F);
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(889, 399);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(667, 324);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(68, 28);
+            this.label5.Size = new System.Drawing.Size(55, 22);
             this.label5.TabIndex = 14;
             this.label5.Text = "label5";
             this.label5.Visible = false;
@@ -206,10 +197,9 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 13.8F);
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(889, 495);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(667, 402);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(68, 28);
+            this.label6.Size = new System.Drawing.Size(55, 22);
             this.label6.TabIndex = 15;
             this.label6.Text = "label6";
             this.label6.Visible = false;
@@ -221,10 +211,9 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 13.8F);
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(889, 588);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(667, 478);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(68, 28);
+            this.label7.Size = new System.Drawing.Size(55, 22);
             this.label7.TabIndex = 16;
             this.label7.Text = "label7";
             this.label7.Visible = false;
@@ -235,10 +224,9 @@
             this.button1.BackColor = System.Drawing.Color.LightSlateGray;
             this.button1.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 13.8F);
             this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(1338, 13);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Location = new System.Drawing.Point(1004, 11);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 34);
+            this.button1.Size = new System.Drawing.Size(75, 28);
             this.button1.TabIndex = 17;
             this.button1.Text = "GoBack";
             this.button1.UseVisualStyleBackColor = false;
@@ -249,9 +237,10 @@
             this.btnPreviousAH.BackColor = System.Drawing.Color.LightSlateGray;
             this.btnPreviousAH.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 13.8F);
             this.btnPreviousAH.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnPreviousAH.Location = new System.Drawing.Point(56, 730);
+            this.btnPreviousAH.Location = new System.Drawing.Point(42, 593);
+            this.btnPreviousAH.Margin = new System.Windows.Forms.Padding(2);
             this.btnPreviousAH.Name = "btnPreviousAH";
-            this.btnPreviousAH.Size = new System.Drawing.Size(133, 41);
+            this.btnPreviousAH.Size = new System.Drawing.Size(100, 33);
             this.btnPreviousAH.TabIndex = 18;
             this.btnPreviousAH.Text = "Previous";
             this.btnPreviousAH.UseVisualStyleBackColor = false;
@@ -262,9 +251,10 @@
             this.btnNextAH.BackColor = System.Drawing.Color.LightSlateGray;
             this.btnNextAH.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 13.8F);
             this.btnNextAH.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnNextAH.Location = new System.Drawing.Point(195, 730);
+            this.btnNextAH.Location = new System.Drawing.Point(146, 593);
+            this.btnNextAH.Margin = new System.Windows.Forms.Padding(2);
             this.btnNextAH.Name = "btnNextAH";
-            this.btnNextAH.Size = new System.Drawing.Size(120, 41);
+            this.btnNextAH.Size = new System.Drawing.Size(90, 33);
             this.btnNextAH.TabIndex = 19;
             this.btnNextAH.Text = "Next";
             this.btnNextAH.UseVisualStyleBackColor = false;
@@ -275,9 +265,10 @@
             this.btnPreviousCars.BackColor = System.Drawing.Color.LightSlateGray;
             this.btnPreviousCars.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 13.8F);
             this.btnPreviousCars.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnPreviousCars.Location = new System.Drawing.Point(765, 730);
+            this.btnPreviousCars.Location = new System.Drawing.Point(574, 593);
+            this.btnPreviousCars.Margin = new System.Windows.Forms.Padding(2);
             this.btnPreviousCars.Name = "btnPreviousCars";
-            this.btnPreviousCars.Size = new System.Drawing.Size(132, 41);
+            this.btnPreviousCars.Size = new System.Drawing.Size(99, 33);
             this.btnPreviousCars.TabIndex = 20;
             this.btnPreviousCars.Text = "Previous";
             this.btnPreviousCars.UseVisualStyleBackColor = false;
@@ -288,9 +279,10 @@
             this.btnNextCars.BackColor = System.Drawing.Color.LightSlateGray;
             this.btnNextCars.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 13.8F);
             this.btnNextCars.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnNextCars.Location = new System.Drawing.Point(903, 730);
+            this.btnNextCars.Location = new System.Drawing.Point(677, 593);
+            this.btnNextCars.Margin = new System.Windows.Forms.Padding(2);
             this.btnNextCars.Name = "btnNextCars";
-            this.btnNextCars.Size = new System.Drawing.Size(120, 41);
+            this.btnNextCars.Size = new System.Drawing.Size(90, 33);
             this.btnNextCars.TabIndex = 21;
             this.btnNextCars.Text = "Next";
             this.btnNextCars.UseVisualStyleBackColor = false;
@@ -298,10 +290,9 @@
             // 
             // pictureBox5
             // 
-            this.pictureBox5.Location = new System.Drawing.Point(707, 573);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox5.Location = new System.Drawing.Point(530, 466);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(133, 62);
+            this.pictureBox5.Size = new System.Drawing.Size(100, 50);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 11;
             this.pictureBox5.TabStop = false;
@@ -309,10 +300,9 @@
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Location = new System.Drawing.Point(707, 485);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox4.Location = new System.Drawing.Point(530, 394);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(133, 62);
+            this.pictureBox4.Size = new System.Drawing.Size(100, 50);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 10;
             this.pictureBox4.TabStop = false;
@@ -320,10 +310,9 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Location = new System.Drawing.Point(707, 384);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox3.Location = new System.Drawing.Point(530, 312);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(133, 62);
+            this.pictureBox3.Size = new System.Drawing.Size(100, 50);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 9;
             this.pictureBox3.TabStop = false;
@@ -331,10 +320,9 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(707, 286);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox2.Location = new System.Drawing.Point(530, 232);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(133, 62);
+            this.pictureBox2.Size = new System.Drawing.Size(100, 50);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 8;
             this.pictureBox2.TabStop = false;
@@ -342,10 +330,9 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(707, 188);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Location = new System.Drawing.Point(530, 153);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(133, 62);
+            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
@@ -353,11 +340,11 @@
             // 
             // Form4
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.RoyalBlue;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(1451, 811);
+            this.ClientSize = new System.Drawing.Size(1088, 659);
             this.Controls.Add(this.btnNextCars);
             this.Controls.Add(this.btnPreviousCars);
             this.Controls.Add(this.btnNextAH);
@@ -382,9 +369,10 @@
             this.Controls.Add(this.lblChose);
             this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.Color.Black;
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form4";
-            this.Text = "Form4";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Buy";
             this.Load += new System.EventHandler(this.Form4_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();

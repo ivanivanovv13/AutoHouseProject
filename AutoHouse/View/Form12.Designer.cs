@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form12));
             this.btnGoBack = new System.Windows.Forms.Button();
             this.lblMoney = new System.Windows.Forms.Label();
             this.lblProbeg = new System.Windows.Forms.Label();
@@ -59,9 +60,9 @@
             // btnGoBack
             // 
             this.btnGoBack.BackColor = System.Drawing.Color.LightSlateGray;
-            this.btnGoBack.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGoBack.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGoBack.Location = new System.Drawing.Point(376, 507);
-            this.btnGoBack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGoBack.Margin = new System.Windows.Forms.Padding(2);
             this.btnGoBack.Name = "btnGoBack";
             this.btnGoBack.Size = new System.Drawing.Size(110, 46);
             this.btnGoBack.TabIndex = 33;
@@ -72,75 +73,75 @@
             // lblMoney
             // 
             this.lblMoney.AutoSize = true;
-            this.lblMoney.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMoney.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMoney.Location = new System.Drawing.Point(372, 193);
             this.lblMoney.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMoney.Name = "lblMoney";
-            this.lblMoney.Size = new System.Drawing.Size(67, 22);
+            this.lblMoney.Size = new System.Drawing.Size(63, 22);
             this.lblMoney.TabIndex = 32;
             this.lblMoney.Text = "Money:";
             // 
             // lblProbeg
             // 
             this.lblProbeg.AutoSize = true;
-            this.lblProbeg.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProbeg.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProbeg.Location = new System.Drawing.Point(372, 156);
             this.lblProbeg.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblProbeg.Name = "lblProbeg";
-            this.lblProbeg.Size = new System.Drawing.Size(70, 22);
+            this.lblProbeg.Size = new System.Drawing.Size(67, 22);
             this.lblProbeg.TabIndex = 31;
             this.lblProbeg.Text = "Probeg:";
             // 
             // lblYear
             // 
             this.lblYear.AutoSize = true;
-            this.lblYear.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblYear.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblYear.Location = new System.Drawing.Point(372, 119);
             this.lblYear.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblYear.Name = "lblYear";
-            this.lblYear.Size = new System.Drawing.Size(50, 22);
+            this.lblYear.Size = new System.Drawing.Size(49, 22);
             this.lblYear.TabIndex = 30;
             this.lblYear.Text = "Year:";
             // 
             // lblColor
             // 
             this.lblColor.AutoSize = true;
-            this.lblColor.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblColor.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblColor.Location = new System.Drawing.Point(372, 83);
             this.lblColor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblColor.Name = "lblColor";
-            this.lblColor.Size = new System.Drawing.Size(55, 22);
+            this.lblColor.Size = new System.Drawing.Size(53, 22);
             this.lblColor.TabIndex = 29;
             this.lblColor.Text = "Color:";
             // 
             // lblModel
             // 
             this.lblModel.AutoSize = true;
-            this.lblModel.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblModel.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblModel.Location = new System.Drawing.Point(372, 46);
             this.lblModel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblModel.Name = "lblModel";
-            this.lblModel.Size = new System.Drawing.Size(68, 22);
+            this.lblModel.Size = new System.Drawing.Size(65, 22);
             this.lblModel.TabIndex = 28;
             this.lblModel.Text = "Model: ";
             // 
             // lblBrand
             // 
             this.lblBrand.AutoSize = true;
-            this.lblBrand.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBrand.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBrand.Location = new System.Drawing.Point(372, 10);
             this.lblBrand.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblBrand.Name = "lblBrand";
-            this.lblBrand.Size = new System.Drawing.Size(58, 22);
+            this.lblBrand.Size = new System.Drawing.Size(59, 22);
             this.lblBrand.TabIndex = 27;
             this.lblBrand.Text = "Brand:";
             // 
             // btnRent
             // 
             this.btnRent.BackColor = System.Drawing.Color.LightSlateGray;
-            this.btnRent.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRent.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRent.Location = new System.Drawing.Point(570, 507);
-            this.btnRent.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRent.Margin = new System.Windows.Forms.Padding(2);
             this.btnRent.Name = "btnRent";
             this.btnRent.Size = new System.Drawing.Size(110, 46);
             this.btnRent.TabIndex = 26;
@@ -151,7 +152,7 @@
             // pictureBoxImage8
             // 
             this.pictureBoxImage8.Location = new System.Drawing.Point(248, 472);
-            this.pictureBoxImage8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBoxImage8.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxImage8.Name = "pictureBoxImage8";
             this.pictureBoxImage8.Size = new System.Drawing.Size(75, 81);
             this.pictureBoxImage8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -162,7 +163,7 @@
             // pictureBoxImage7
             // 
             this.pictureBoxImage7.Location = new System.Drawing.Point(168, 472);
-            this.pictureBoxImage7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBoxImage7.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxImage7.Name = "pictureBoxImage7";
             this.pictureBoxImage7.Size = new System.Drawing.Size(75, 81);
             this.pictureBoxImage7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -173,7 +174,7 @@
             // pictureBoxImage6
             // 
             this.pictureBoxImage6.Location = new System.Drawing.Point(88, 472);
-            this.pictureBoxImage6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBoxImage6.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxImage6.Name = "pictureBoxImage6";
             this.pictureBoxImage6.Size = new System.Drawing.Size(75, 81);
             this.pictureBoxImage6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -184,7 +185,7 @@
             // pictureBoxImage5
             // 
             this.pictureBoxImage5.Location = new System.Drawing.Point(9, 472);
-            this.pictureBoxImage5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBoxImage5.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxImage5.Name = "pictureBoxImage5";
             this.pictureBoxImage5.Size = new System.Drawing.Size(75, 81);
             this.pictureBoxImage5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -195,7 +196,7 @@
             // pictureBoxImage4
             // 
             this.pictureBoxImage4.Location = new System.Drawing.Point(248, 386);
-            this.pictureBoxImage4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBoxImage4.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxImage4.Name = "pictureBoxImage4";
             this.pictureBoxImage4.Size = new System.Drawing.Size(75, 81);
             this.pictureBoxImage4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -206,7 +207,7 @@
             // pictureBoxImage3
             // 
             this.pictureBoxImage3.Location = new System.Drawing.Point(168, 386);
-            this.pictureBoxImage3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBoxImage3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxImage3.Name = "pictureBoxImage3";
             this.pictureBoxImage3.Size = new System.Drawing.Size(75, 81);
             this.pictureBoxImage3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -217,7 +218,7 @@
             // pictureBoxImage2
             // 
             this.pictureBoxImage2.Location = new System.Drawing.Point(88, 386);
-            this.pictureBoxImage2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBoxImage2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxImage2.Name = "pictureBoxImage2";
             this.pictureBoxImage2.Size = new System.Drawing.Size(75, 81);
             this.pictureBoxImage2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -228,7 +229,7 @@
             // pictureBoxImage1
             // 
             this.pictureBoxImage1.Location = new System.Drawing.Point(9, 386);
-            this.pictureBoxImage1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBoxImage1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxImage1.Name = "pictureBoxImage1";
             this.pictureBoxImage1.Size = new System.Drawing.Size(75, 81);
             this.pictureBoxImage1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -239,7 +240,7 @@
             // pictureBoxZoomImage
             // 
             this.pictureBoxZoomImage.Location = new System.Drawing.Point(9, 10);
-            this.pictureBoxZoomImage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBoxZoomImage.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxZoomImage.Name = "pictureBoxZoomImage";
             this.pictureBoxZoomImage.Size = new System.Drawing.Size(314, 340);
             this.pictureBoxZoomImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -269,8 +270,10 @@
             this.Controls.Add(this.pictureBoxImage2);
             this.Controls.Add(this.pictureBoxImage1);
             this.Controls.Add(this.pictureBoxZoomImage);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form12";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Rent a Car";
             this.Load += new System.EventHandler(this.Form12_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage8)).EndInit();

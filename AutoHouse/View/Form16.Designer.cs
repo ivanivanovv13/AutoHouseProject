@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form16));
             this.listBoxUser = new System.Windows.Forms.ListBox();
             this.btnBack = new System.Windows.Forms.Button();
             this.btnDeleteSelectedUser = new System.Windows.Forms.Button();
@@ -39,7 +40,7 @@
             this.listBoxUser.FormattingEnabled = true;
             this.listBoxUser.ItemHeight = 22;
             this.listBoxUser.Location = new System.Drawing.Point(42, 27);
-            this.listBoxUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listBoxUser.Margin = new System.Windows.Forms.Padding(2);
             this.listBoxUser.Name = "listBoxUser";
             this.listBoxUser.Size = new System.Drawing.Size(626, 488);
             this.listBoxUser.TabIndex = 0;
@@ -47,9 +48,9 @@
             // btnBack
             // 
             this.btnBack.BackColor = System.Drawing.Color.LightSlateGray;
-            this.btnBack.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.Location = new System.Drawing.Point(761, 308);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(2);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(156, 54);
             this.btnBack.TabIndex = 16;
@@ -60,9 +61,9 @@
             // btnDeleteSelectedUser
             // 
             this.btnDeleteSelectedUser.BackColor = System.Drawing.Color.LightSlateGray;
-            this.btnDeleteSelectedUser.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteSelectedUser.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleteSelectedUser.Location = new System.Drawing.Point(762, 212);
-            this.btnDeleteSelectedUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDeleteSelectedUser.Margin = new System.Windows.Forms.Padding(2);
             this.btnDeleteSelectedUser.Name = "btnDeleteSelectedUser";
             this.btnDeleteSelectedUser.Size = new System.Drawing.Size(156, 54);
             this.btnDeleteSelectedUser.TabIndex = 15;
@@ -79,8 +80,10 @@
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnDeleteSelectedUser);
             this.Controls.Add(this.listBoxUser);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form16";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Remove User";
             this.Load += new System.EventHandler(this.Form16_Load);
             this.ResumeLayout(false);

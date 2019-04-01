@@ -26,6 +26,7 @@ namespace AutoHouse
         private void Form1_Load(object sender, EventArgs e)
         {
             this.DoubleBuffered = true;
+            this.MaximizeBox = false;
         }
 
         protected override void OnFormClosing(FormClosingEventArgs e)
@@ -45,10 +46,10 @@ namespace AutoHouse
             {
 
                 bool flag = true;
-                MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
+                MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
                 try
                 {
-                    connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
+                    connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
                     connection.Open();
                     using (connection)
                     {

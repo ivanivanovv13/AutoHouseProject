@@ -88,6 +88,7 @@ namespace AutoHouse.View
 
         private void Form4_Load(object sender, EventArgs e)
         {
+            this.MaximizeBox = false;
             addLabelAndPictureBox();
 
             btnPreviousAH.Visible = false;

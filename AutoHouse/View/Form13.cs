@@ -114,6 +114,7 @@ namespace AutoHouse.View
 
         private void Form13_Load(object sender, EventArgs e)
         {
+            this.MaximizeBox = false;
             if (this.AutoHouse.Count() == 1)
             {
                 comboBoxAutoHouse.Visible = false;
@@ -129,7 +130,7 @@ namespace AutoHouse.View
             }
 
 
-            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
+            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
             try
             {
                 using (connection)

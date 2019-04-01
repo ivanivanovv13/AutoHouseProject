@@ -28,7 +28,7 @@ namespace AutoHouse
             {
                 using (connection)
                 {
-                    MySqlCommand sqlcom = new MySqlCommand("SELECT id,user,pass from users where user='" + name + "'", connection);
+                    MySqlCommand sqlcom = new MySqlCommand("SELECT id,user,pass from users where user='" + name + "'and pass!='null' ;", connection);
                     connection.Open();
                     MySqlDataReader reader = sqlcom.ExecuteReader();
 

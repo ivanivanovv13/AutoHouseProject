@@ -219,22 +219,26 @@ namespace AutoHouse.View
         private void btnSearch_Click(object sender, EventArgs e)
         {
 
-            if(dateTimePicker1.Value>= DateTime.UtcNow.Date)
-            if (dateTimePicker1.Value<dateTimePicker2.Value)
-            {
-                CantRenta();
-                btnPreviousAH.Visible = false;
-                btnPreviousCars.Visible = false;
-                btnNextCars.Visible = false;
-                if (autoHouses.Count() < 5)
+            if (dateTimePicker1.Value >= DateTime.UtcNow.Date)
+                if (dateTimePicker1.Value < dateTimePicker2.Value)
                 {
-                    btnNextAH.Visible = false;
-                }
+                    CantRenta();
+                    btnPreviousAH.Visible = false;
+                    btnPreviousCars.Visible = false;
+                    btnNextCars.Visible = false;
+                    if (autoHouses.Count() < 5)
+                    {
+                        btnNextAH.Visible = false;
+                    }
+                    else
+                    {
+                        btnNextAH.Visible = true;
+                    }
 
-                displayAH(startAH);
+                        displayAH(startAH);
                 
 
-            }
+                }
             
         }
 
@@ -246,7 +250,7 @@ namespace AutoHouse.View
         private void btnNextCars_Click(object sender, EventArgs e)
         {
             startCar += 5;
-            if (startCar < autoHousesRenta[curentAhID].RentaCars.Count())
+            if (startCar >= autoHousesRenta[curentAhID].RentaCars.Count()-5)
             {
                 btnNextCars.Visible = false;
             }
@@ -279,7 +283,7 @@ namespace AutoHouse.View
         private void btnNextAH_Click(object sender, EventArgs e)
         {
             startAH += 5;
-            if (startAH < autoHouses.Count())
+            if (startAH >= autoHouses.Count()-5)
             {
                 btnNextAH.Visible = false;
             }

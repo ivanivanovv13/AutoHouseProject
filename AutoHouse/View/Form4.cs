@@ -196,7 +196,7 @@ namespace AutoHouse.View
         private void btnNextAH_Click(object sender, EventArgs e)
         {
             startAH += 5;
-            if(startAH<autoHouses.Count())
+            if(startAH>=autoHouses.Count()-5)
             {
                 btnNextAH.Visible = false;
             }
@@ -218,7 +218,7 @@ namespace AutoHouse.View
         private void btnNextCars_Click(object sender, EventArgs e)
         {
             startCar += 5;
-            if (startCar < autoHouses[curentAhID].CarsForSell.Count())
+            if (startCar >= autoHouses[curentAhID].CarsForSell.Count()-5)
             {
                 btnNextCars.Visible = false;
             }

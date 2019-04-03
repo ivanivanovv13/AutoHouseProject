@@ -303,8 +303,10 @@ namespace AutoHouse
                     {
                         MySqlCommand cmd = new MySqlCommand("select count(autohouses.id) from autohouses where autohouses.id_owner='"+users.Id+"' group by autohouses.id_owner;", connection);
                         MySqlDataReader reader = cmd.ExecuteReader();
+                        bool flag1 = true;
                         if (reader.Read())
                         {
+                            flag1 = false;
                             if (int.Parse(reader["count(autohouses.id)"].ToString()) < 5)
                             {
                                 Form frm = new View.Form3(users, this);
@@ -315,12 +317,20 @@ namespace AutoHouse
                                 MessageBox.Show("You can't have more then 5 autohouses","AutoHouse",MessageBoxButtons.OK);
                             }
                         }
+                        else
+                        {
+                            if (flag1)
+                            {
+                                Form frm = new View.Form3(users, this);
+                                frm.Show();
+                            }
+                        }
                     }
                     connection.Close();
                 }
-                catch (Exception)
+                catch (Exception )
                 {
-
+                    
                 }
             }
             else
@@ -352,6 +362,11 @@ namespace AutoHouse
             Form fm = new View.Form5(users,autoHouse);
             fm.Show();
             this.Hide();
+        }
+
+        public void btnVisibleOwnerMenu()
+        {
+            button1.Visible = true;
         }
 
         private void button1_Click(object sender, EventArgs e)

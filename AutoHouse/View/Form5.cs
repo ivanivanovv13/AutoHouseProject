@@ -174,7 +174,7 @@ namespace AutoHouse.View
                 if (i < autoHouses.Count())
                 {
                     labelsAH[n].Visible = true;
-                    labelsAH[n].Text = autoHouses[i].Id + " " + autoHouses[i].Name + " " + autoHouses[i].Adres + " " + autoHouses[i].Town;
+                    labelsAH[n].Text = i+1 + " " + autoHouses[i].Name + " " + autoHouses[i].Adres + " " + autoHouses[i].Town;
                 }
                 else
                     labelsAH[n].Visible = false;

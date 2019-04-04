@@ -193,7 +193,10 @@ namespace AutoHouse.View
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-
+            picnumber = 1;
+            myth = new Thread(new System.Threading.ThreadStart(Call));
+            myth.ApartmentState = ApartmentState.STA;
+            myth.Start();
         }
 
         public void Call()
@@ -384,6 +387,62 @@ namespace AutoHouse.View
                 flag = true;
             }
             else flag = false;
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            picnumber = 2;
+            myth = new Thread(new System.Threading.ThreadStart(Call));
+            myth.ApartmentState = ApartmentState.STA;
+            myth.Start();
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            picnumber = 3;
+            myth = new Thread(new System.Threading.ThreadStart(Call));
+            myth.ApartmentState = ApartmentState.STA;
+            myth.Start();
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            picnumber = 4;
+            myth = new Thread(new System.Threading.ThreadStart(Call));
+            myth.ApartmentState = ApartmentState.STA;
+            myth.Start();
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            picnumber = 5;
+            myth = new Thread(new System.Threading.ThreadStart(Call));
+            myth.ApartmentState = ApartmentState.STA;
+            myth.Start();
+        }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+            picnumber = 6;
+            myth = new Thread(new System.Threading.ThreadStart(Call));
+            myth.ApartmentState = ApartmentState.STA;
+            myth.Start();
+        }
+
+        private void pictureBox8_Click(object sender, EventArgs e)
+        {
+            picnumber = 7;
+            myth = new Thread(new System.Threading.ThreadStart(Call));
+            myth.ApartmentState = ApartmentState.STA;
+            myth.Start();
+        }
+
+        private void pictureBox9_Click(object sender, EventArgs e)
+        {
+            picnumber = 8;
+            myth = new Thread(new System.Threading.ThreadStart(Call));
+            myth.ApartmentState = ApartmentState.STA;
+            myth.Start();
         }
 
         private void comboBoxAutoHouses_SelectedIndexChanged(object sender, EventArgs e)

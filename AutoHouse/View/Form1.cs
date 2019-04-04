@@ -46,25 +46,20 @@ namespace AutoHouse
             {
 
                 bool flag = true;
-                MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
+                MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
                 try
                 {
-                    connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
                     connection.Open();
                     using (connection)
                     {
-                        connection.Open();
-                        using (connection)
-                        {
-                            MySqlCommand cmd = new MySqlCommand("INSERT INTO users (user,pass) VALUES (@user,@pass)", connection);
-                            cmd.Parameters.AddWithValue("@user", textBox1.Text);
-                            cmd.Parameters.AddWithValue("@pass", textBox2.Text);
-                            cmd.ExecuteNonQuery();
-                        }
-                        connection.Close();
+                        MySqlCommand cmd = new MySqlCommand("INSERT INTO users (user,pass) VALUES (@user,@pass)", connection);
+                        cmd.Parameters.AddWithValue("@user", textBox1.Text);
+                        cmd.Parameters.AddWithValue("@pass", textBox2.Text);
+                        cmd.ExecuteNonQuery();
                     }
+                    connection.Close();
                 }
-                catch (Exception)
+                catch (Exception )
                 {
                     MessageBox.Show("Imeto veche e izpolzvano");
                     flag = false;

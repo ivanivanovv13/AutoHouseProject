@@ -40,7 +40,7 @@ namespace AutoHouse
 
         public void IfOwner()
         {
-            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
+            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
             try
             {
                 List<int> idAH = new List<int>();
@@ -76,7 +76,7 @@ namespace AutoHouse
         public void Reconect()
         {
             autoHouse.Clear();
-            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
+            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
             try
             {
                 using (connection)
@@ -94,7 +94,7 @@ namespace AutoHouse
                         string town = reader["town"].ToString();
                         List<Car> carsForSell = new List<Car>();
                         List<Car> rentaCars = new List<Car>();
-                        MySqlConnection connectionCarForSell = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
+                        MySqlConnection connectionCarForSell = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
                         connectionCarForSell.Open();
                         using (connectionCarForSell)
                         {
@@ -125,7 +125,7 @@ namespace AutoHouse
                         }
 
 
-                        MySqlConnection connectionRentaCar = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
+                        MySqlConnection connectionRentaCar = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
                         connectionRentaCar.Open();
                         using (connectionRentaCar)
                         {
@@ -174,7 +174,7 @@ namespace AutoHouse
         private void IfAdmin()
         {
             int idUser=0;
-            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
+            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
             try
             {
                 connection.Open();
@@ -210,7 +210,7 @@ namespace AutoHouse
 
         private void IfHeCanRentAndBuy()
         {
-            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
+            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
             try
             {
                 connection.Open();
@@ -270,7 +270,7 @@ namespace AutoHouse
         private void label1_Click_1(object sender, EventArgs e)
         {
             bool flag = false;
-            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
+            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
             try
             {
                 connection.Open();
@@ -303,8 +303,10 @@ namespace AutoHouse
                     {
                         MySqlCommand cmd = new MySqlCommand("select count(autohouses.id) from autohouses where autohouses.id_owner='"+users.Id+"' group by autohouses.id_owner;", connection);
                         MySqlDataReader reader = cmd.ExecuteReader();
+                        bool flag1 = true;
                         if (reader.Read())
                         {
+                            flag1 = false;
                             if (int.Parse(reader["count(autohouses.id)"].ToString()) < 5)
                             {
                                 Form frm = new View.Form3(users, this);
@@ -315,12 +317,20 @@ namespace AutoHouse
                                 MessageBox.Show("You can't have more then 5 autohouses","AutoHouse",MessageBoxButtons.OK);
                             }
                         }
+                        else
+                        {
+                            if (flag1)
+                            {
+                                Form frm = new View.Form3(users, this);
+                                frm.Show();
+                            }
+                        }
                     }
                     connection.Close();
                 }
-                catch (Exception)
+                catch (Exception )
                 {
-
+                    
                 }
             }
             else
@@ -352,6 +362,11 @@ namespace AutoHouse
             Form fm = new View.Form5(users,autoHouse);
             fm.Show();
             this.Hide();
+        }
+
+        public void btnVisibleOwnerMenu()
+        {
+            button1.Visible = true;
         }
 
         private void button1_Click(object sender, EventArgs e)

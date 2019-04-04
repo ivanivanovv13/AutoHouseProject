@@ -83,7 +83,7 @@ namespace AutoHouse.View
 
         private void CantRenta()
         {
-            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
+            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
             try
             {
                 
@@ -92,7 +92,7 @@ namespace AutoHouse.View
                     connection.Open();
                     for (int i = 0; i < autoHousesRenta.Count; i++)
                     {
-                        MySqlCommand sqlcom = new MySqlCommand("select cars.id ,cars.model,cars.brand,cars.color,cars.year,cars.probeg, cars.image,rent_car.price_day from grafik join cars on grafik.id_cars = cars.id join rent_car on rent_car.id_cars = cars.id join autohouses on autohouses.id = rent_car.id_autoH where( (grafik.time_take<'"+dateTimePicker1.Value.ToString("yyyy-MM-dd") + "' and grafik.time_return>'" + dateTimePicker1.Value.ToString("yyyy-MM-dd") + "') or  (grafik.time_take<'" + dateTimePicker2.Value.ToString("yyyy-MM-dd") + "' and grafik.time_return>'" + dateTimePicker2.Value.ToString("yyyy-MM-dd") + "') or  (grafik.time_take>'" + dateTimePicker1.Value.ToString("yyyy-MM-dd") + "' and grafik.time_take<'" + dateTimePicker2.Value.ToString("yyyy-MM-dd") + "') or  (grafik.time_return>'" + dateTimePicker1.Value.ToString("yyyy-MM-dd") + "' and grafik.time_return<'" + dateTimePicker2.Value.ToString("yyyy-MM-dd") + "') ) and autohouses.id ='" + autoHousesRenta[i].Id+"' group by cars.id;", connection);
+                        MySqlCommand sqlcom = new MySqlCommand("select cars.id ,cars.model,cars.brand,cars.color,cars.year,cars.probeg, cars.image,rent_car.price_day from grafik join cars on grafik.id_cars = cars.id join rent_car on rent_car.id_cars = cars.id join autohouses on autohouses.id = rent_car.id_autoH where( (grafik.time_take<='"+dateTimePicker1.Value.ToString("yyyy-MM-dd") + "' and grafik.time_return>='" + dateTimePicker1.Value.ToString("yyyy-MM-dd") + "') or  (grafik.time_take<='" + dateTimePicker2.Value.ToString("yyyy-MM-dd") + "' and grafik.time_return>='" + dateTimePicker2.Value.ToString("yyyy-MM-dd") + "') or  (grafik.time_take>='" + dateTimePicker1.Value.ToString("yyyy-MM-dd") + "' and grafik.time_take<='" + dateTimePicker2.Value.ToString("yyyy-MM-dd") + "') or  (grafik.time_return>='" + dateTimePicker1.Value.ToString("yyyy-MM-dd") + "' and grafik.time_return<='" + dateTimePicker2.Value.ToString("yyyy-MM-dd") + "') ) and autohouses.id ='" + autoHousesRenta[i].Id+"' group by cars.id;", connection);
 
                         MySqlDataReader reader = sqlcom.ExecuteReader();
                         while(reader.Read())
@@ -174,7 +174,7 @@ namespace AutoHouse.View
                 if (i < autoHouses.Count())
                 {
                     labelsAH[n].Visible = true;
-                    labelsAH[n].Text = autoHouses[i].Id + " " + autoHouses[i].Name + " " + autoHouses[i].Adres + " " + autoHouses[i].Town;
+                    labelsAH[n].Text = i+1 + " " + autoHouses[i].Name + " " + autoHouses[i].Adres + " " + autoHouses[i].Town;
                 }
                 else
                     labelsAH[n].Visible = false;
@@ -219,22 +219,26 @@ namespace AutoHouse.View
         private void btnSearch_Click(object sender, EventArgs e)
         {
 
-            if(dateTimePicker1.Value>= DateTime.UtcNow.Date)
-            if (dateTimePicker1.Value<dateTimePicker2.Value)
-            {
-                CantRenta();
-                btnPreviousAH.Visible = false;
-                btnPreviousCars.Visible = false;
-                btnNextCars.Visible = false;
-                if (autoHouses.Count() < 5)
+            if (dateTimePicker1.Value >= DateTime.UtcNow.Date)
+                if (dateTimePicker1.Value < dateTimePicker2.Value)
                 {
-                    btnNextAH.Visible = false;
-                }
+                    CantRenta();
+                    btnPreviousAH.Visible = false;
+                    btnPreviousCars.Visible = false;
+                    btnNextCars.Visible = false;
+                    if (autoHouses.Count() < 5)
+                    {
+                        btnNextAH.Visible = false;
+                    }
+                    else
+                    {
+                        btnNextAH.Visible = true;
+                    }
 
-                displayAH(startAH);
+                        displayAH(startAH);
                 
 
-            }
+                }
             
         }
 
@@ -246,7 +250,7 @@ namespace AutoHouse.View
         private void btnNextCars_Click(object sender, EventArgs e)
         {
             startCar += 5;
-            if (startCar < autoHousesRenta[curentAhID].RentaCars.Count())
+            if (startCar >= autoHousesRenta[curentAhID].RentaCars.Count()-5)
             {
                 btnNextCars.Visible = false;
             }
@@ -279,7 +283,7 @@ namespace AutoHouse.View
         private void btnNextAH_Click(object sender, EventArgs e)
         {
             startAH += 5;
-            if (startAH < autoHouses.Count())
+            if (startAH >= autoHouses.Count()-5)
             {
                 btnNextAH.Visible = false;
             }

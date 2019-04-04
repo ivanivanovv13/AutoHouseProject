@@ -23,12 +23,12 @@ namespace AutoHouse
         public bool LogInFill(string name,string pass)
         {
        
-            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
+            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
             try
             {
                 using (connection)
                 {
-                    MySqlCommand sqlcom = new MySqlCommand("SELECT id,user,pass from users where user='" + name + "'", connection);
+                    MySqlCommand sqlcom = new MySqlCommand("SELECT id,user,pass from users where user='" + name + "'and pass!='null' ;", connection);
                     connection.Open();
                     MySqlDataReader reader = sqlcom.ExecuteReader();
 

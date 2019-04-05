@@ -82,7 +82,6 @@ namespace AutoHouse.View
             {
                 int index = listBoxUser.SelectedIndex;
                 MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
-                MessageBox.Show(index.ToString());
                 MySqlCommand sqlcom = new MySqlCommand("DELETE FROM users_ah WHERE users_ah.id_users='"+users[index].Id +"';", connection);
                 MySqlDataReader MyReader2;
                 connection.Open();
@@ -120,7 +119,16 @@ namespace AutoHouse.View
                     sqlcom.Dispose();
                     MyReader2.Dispose();
                 }
-                
+
+                connection.Open();
+                sqlcom = new MySqlCommand("update autohouses set autohouses.id_owner=null where autohouses.id_owner='" + users[index].Id + "';", connection);
+
+                MyReader2 = sqlcom.ExecuteReader();
+                while (MyReader2.Read())
+                {
+                }
+                connection.Close();
+
 
                 connection.Open();
                 sqlcom = new MySqlCommand("update users set users.pass=null where users.id='" + users[index].Id + "';", connection);

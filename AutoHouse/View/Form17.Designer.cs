@@ -56,7 +56,7 @@
             this.btnDeleteSelectedAutoHouse.Name = "btnDeleteSelectedAutoHouse";
             this.btnDeleteSelectedAutoHouse.Size = new System.Drawing.Size(156, 54);
             this.btnDeleteSelectedAutoHouse.TabIndex = 18;
-            this.btnDeleteSelectedAutoHouse.Text = "Delete selected AutoHouses";
+            this.btnDeleteSelectedAutoHouse.Text = "Delete selected AutoHouse";
             this.btnDeleteSelectedAutoHouse.UseVisualStyleBackColor = false;
             this.btnDeleteSelectedAutoHouse.Click += new System.EventHandler(this.btnDeleteSelectedAutoHouse_Click);
             // 

@@ -15,9 +15,9 @@ namespace AutoHouse.View
 {
     public partial class Form9 : Form
     {
-        bool flag = true,exep=false;
+        bool flag = true, exep = false;
         int picnumber = 1, idAh, id;
-        string ahName;
+        string ahName,erroryear="",errormileage="",errorprice="";
         Car obj = new Car();
         Users user;
         List<AutoHouse> autoHouse;
@@ -33,7 +33,11 @@ namespace AutoHouse.View
         Thread myth;
         public void AddCar()
         {
+
             MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
+
+            
+
             connection.Open();
             using (connection)
             {
@@ -53,25 +57,23 @@ namespace AutoHouse.View
             connection.Close();
 
 
-            /*pictureBox3.Image.Dispose();
-            pictureBox4.Image.Dispose();
-            pictureBox5.Image.Dispose();
-            pictureBox6.Image.Dispose();
-            pictureBox7.Image.Dispose();
-            pictureBox8.Image.Dispose();
-            pictureBox9.Image.Dispose();*/
+
         }
         public void Rent()
         {
 
+
             MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
+
+            
+
             connection.Open();
             using (connection)
             {
                 string[] words = comboBoxAutoHouses.SelectedItem.ToString().Split(' ');
                 ahName = words[0];
                 MySqlCommand cmd = new MySqlCommand("INSERT INTO rent_car (id_autoH,id_cars,price_day) VALUES (@id_autoH,@id_cars,@price_day)", connection);
-                for (int i = 0; i < autoHouse.Count - 1; i++)
+                for (int i = 0; i < autoHouse.Count; i++)
                 {
                     if (autoHouse[i].Name == ahName)
                     {
@@ -91,14 +93,18 @@ namespace AutoHouse.View
         public void Buy()
         {
 
+
             MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
+
+            
+
             connection.Open();
             using (connection)
             {
                 string[] words = comboBoxAutoHouses.SelectedItem.ToString().Split(' ');
                 ahName = words[0];
                 MySqlCommand cmd = new MySqlCommand("INSERT INTO carforsell (id_car,id_ah,price) VALUES (@id_car,@id_ah,@price)", connection);
-                for (int i = 0; i < autoHouse.Count - 1; i++)
+                for (int i = 0; i < autoHouse.Count; i++)
                 {
                     if (autoHouse[i].Name == ahName)
                     {
@@ -116,7 +122,11 @@ namespace AutoHouse.View
         }
         public void insertPic(Image pic)
         {
+
             MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
+
+            
+
             connection.Open();
             using (connection)
             {
@@ -131,7 +141,11 @@ namespace AutoHouse.View
         public int GetCarID()
         {
 
+
             MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
+
+            
+
 
             using (connection)
             {
@@ -171,7 +185,7 @@ namespace AutoHouse.View
 
         }
 
-        public Form9(Users user,List<AutoHouse> autoHouses)
+        public Form9(Users user, List<AutoHouse> autoHouses)
         {
             this.user = user;
             this.autoHouse = autoHouses;
@@ -181,14 +195,14 @@ namespace AutoHouse.View
         private void Form9_Load(object sender, EventArgs e)
         {
             this.MaximizeBox = false;
-            if (autoHouse.Count > 1)
+
+
+            comboBoxAutoHouses.Show();
+            for (int i = 0; i < autoHouse.Count; i++)
             {
-                comboBoxAutoHouses.Show();
-                for (int i = 0; i < autoHouse.Count; i++)
-                {
-                    comboBoxAutoHouses.Items.Add(autoHouse[i].Name + " " + autoHouse[i].Adres + " " + autoHouse[i].Town);
-                }
+                comboBoxAutoHouses.Items.Add(autoHouse[i].Name + " " + autoHouse[i].Adres + " " + autoHouse[i].Town);
             }
+
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -251,13 +265,12 @@ namespace AutoHouse.View
 
         private void btnAddCar_Click(object sender, EventArgs e)
         {
-            if (txtBrand.Text=="" || txtModel.Text == "" || txtColor.Text == "" || txtPrice.Text== "" || txtYear.Text=="" || txtMileage.Text=="")
-            {
-                flag = true;
-            }
+            if (int.Parse(txtYear.Text.ToString()) < 1930) flag = true;erroryear = "Year";
+            if (int.Parse(txtYear.Text.ToString()) > 2019) flag = true; erroryear = "Year";
+
             if (flag)
             {
-                MessageBox.Show("Please enter valid information");
+                MessageBox.Show("Please enter valid "+erroryear+" "+errorprice+" "+errormileage+"."); 
             }
             else 
             {
@@ -265,10 +278,12 @@ namespace AutoHouse.View
                 {
                     AddCar();
                     GetPic();
+
                 }
-                catch(Exception)
+                catch( Exception a)
                 {
                     MessageBox.Show("Please enter valid information");
+                   
                 }
                
 
@@ -285,9 +300,10 @@ namespace AutoHouse.View
                         Buy();
                         exep = true;
                     }
-                    catch (Exception)
+                    catch (Exception a )
                     {
                         MessageBox.Show("Please enter valid information");
+                        MessageBox.Show(a.ToString());
                         exep = false;
                     }
                 }
@@ -325,6 +341,7 @@ namespace AutoHouse.View
             }
         }
 
+
         private void rdRent_CheckedChanged(object sender, EventArgs e)
         {
             if(rdRent.Checked)
@@ -342,6 +359,8 @@ namespace AutoHouse.View
                 lblPrice.Location = new Point(55, 180);
             }
         }
+
+
 
         private void txtBrand_TextChanged(object sender, EventArgs e)
         {
@@ -374,17 +393,19 @@ namespace AutoHouse.View
         {
             if (System.Text.RegularExpressions.Regex.IsMatch(txtPrice.Text, "[^0-9]"))
             {
-                flag = true;
+                flag = true; errorprice = "price";
             }
-            else flag=false;
+            if (txtMileage.Text == "") {flag = true; errorprice = "price"; }
+            else flag = false;
         }
 
         private void txtMileage_TextChanged(object sender, EventArgs e)
         {
             if (System.Text.RegularExpressions.Regex.IsMatch(txtMileage.Text, "[^0-9]"))
             {
-                flag = true;
+                flag = true; errormileage = "mileage";
             }
+            if (txtMileage.Text == "") {flag = true; errormileage = "mileage"; }
             else flag = false;
         }
 
@@ -392,8 +413,9 @@ namespace AutoHouse.View
         {
             if (System.Text.RegularExpressions.Regex.IsMatch(txtYear.Text, "[^0-9]"))
             {
-                flag = true;
+                flag = true; erroryear = "Year";
             }
+            if (txtYear.Text == "") {flag = true; erroryear = "Year"; }
             else flag = false;
         }
 
@@ -421,6 +443,16 @@ namespace AutoHouse.View
             myth.Start();
         }
 
+        private void rdRent_CheckedChanged(object sender, EventArgs e)
+        {
+            lblPrice.Text = "Pricea day:";
+        }
+
+        private void rdSell_CheckedChanged(object sender, EventArgs e)
+        {
+            lblPrice.Text = "Price:";
+        }
+
         private void pictureBox6_Click(object sender, EventArgs e)
         {
             picnumber = 5;
@@ -445,6 +477,8 @@ namespace AutoHouse.View
             myth.Start();
         }
 
+      
+
         private void pictureBox9_Click(object sender, EventArgs e)
         {
             picnumber = 8;
@@ -453,10 +487,7 @@ namespace AutoHouse.View
             myth.Start();
         }
 
-        private void comboBoxAutoHouses_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {

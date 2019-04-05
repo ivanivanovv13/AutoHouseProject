@@ -33,7 +33,7 @@ namespace AutoHouse.View
         Thread myth;
         public void AddCar()
         {
-            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
+            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
             connection.Open();
             using (connection)
             {
@@ -64,7 +64,7 @@ namespace AutoHouse.View
         public void Rent()
         {
 
-            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
+            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
             connection.Open();
             using (connection)
             {
@@ -91,7 +91,7 @@ namespace AutoHouse.View
         public void Buy()
         {
 
-            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
+            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
             connection.Open();
             using (connection)
             {
@@ -116,7 +116,7 @@ namespace AutoHouse.View
         }
         public void insertPic(Image pic)
         {
-            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
+            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
             connection.Open();
             using (connection)
             {
@@ -131,7 +131,7 @@ namespace AutoHouse.View
         public int GetCarID()
         {
 
-            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
+            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
 
             using (connection)
             {
@@ -285,7 +285,11 @@ namespace AutoHouse.View
 
         private void rdRent_CheckedChanged(object sender, EventArgs e)
         {
-
+            if (rdRent.Checked)
+            {
+                lblPrice.Text = "Price a Day:";
+                lblPrice.Location = new Point(0, 170);
+            }
         }
 
         private void txtBrand_TextChanged(object sender, EventArgs e)
@@ -395,6 +399,16 @@ namespace AutoHouse.View
             myth = new Thread(new System.Threading.ThreadStart(Call));
             myth.ApartmentState = ApartmentState.STA;
             myth.Start();
+        }
+
+        private void rdSell_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rdSell.Checked)
+            {
+                lblPrice.Text = "Price :";
+                lblPrice.Location = new Point(52, 170);
+            }
+            
         }
 
         private void txtYear_TextChanged(object sender, EventArgs e)

@@ -31,7 +31,7 @@ namespace AutoHouse.View
         private void Form3_Load(object sender, EventArgs e)
         {
             this.MaximizeBox = false;
-            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
+            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
             connection.Open();
             using (connection)
             {
@@ -65,7 +65,7 @@ namespace AutoHouse.View
             else
             {
                 int count = 0;
-                MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
+                MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
                 connection.Open();
                 using (connection)
                 {
@@ -113,7 +113,7 @@ namespace AutoHouse.View
                         }
                         connection.Close();
 
-                        MySqlConnection connectionUserAH = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
+                        MySqlConnection connectionUserAH = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
                         connectionUserAH.Open();
                         using (connectionUserAH)
                         {

@@ -23,7 +23,7 @@ namespace AutoHouse
         public bool LogInFill(string name,string pass)
         {
        
-            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
+            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
             try
             {
                 using (connection)

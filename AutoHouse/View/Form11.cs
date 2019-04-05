@@ -47,7 +47,7 @@ namespace AutoHouse.View
 
                         MySqlConnection connectionCarForSell = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
 
-                        MySqlConnection connectionCarForSell = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=090801");
+                     
 
                         connectionCarForSell.Open();
                         using (connectionCarForSell)
@@ -80,7 +80,7 @@ namespace AutoHouse.View
 
                         MySqlConnection connectionRentaCar = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
 
-                        MySqlConnection connectionRentaCar = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=090801");
+                        
 
                         connectionRentaCar.Open();
                         using (connectionRentaCar)

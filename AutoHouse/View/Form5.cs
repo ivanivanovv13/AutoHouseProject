@@ -86,7 +86,7 @@ namespace AutoHouse.View
 
             MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
 
-            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=090801");
+           
 
             try
             {

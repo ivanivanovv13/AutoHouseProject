@@ -15,6 +15,7 @@ namespace AutoHouse.View
 {
     public partial class Form14 : Form
     {
+        MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
         bool flag = true,exep=false;
         int picnumber = 1, idAh, id;
         string ahName;
@@ -34,7 +35,7 @@ namespace AutoHouse.View
         public void AddCar()
         {
 
-           
+
 
             
 

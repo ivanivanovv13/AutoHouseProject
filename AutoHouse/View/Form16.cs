@@ -87,12 +87,9 @@ namespace AutoHouse.View
 
                 MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
 
-
-                 
-
                 MessageBox.Show(index.ToString());
 
-                MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
+                
 
                 MySqlCommand sqlcom = new MySqlCommand("DELETE FROM users_ah WHERE users_ah.id_users='"+users[index].Id +"';", connection);
                 MySqlDataReader MyReader2;

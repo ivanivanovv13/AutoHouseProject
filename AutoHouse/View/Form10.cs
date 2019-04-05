@@ -195,7 +195,7 @@ namespace AutoHouse.View
 
                 MySqlConnection connectionStatistic = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
 
-                MySqlConnection connectionStatistic = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=090801");
+              
 
                 connectionStatistic.Open();
                 using (connectionStatistic)

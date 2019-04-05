@@ -443,15 +443,7 @@ namespace AutoHouse.View
             myth.Start();
         }
 
-        private void rdRent_CheckedChanged(object sender, EventArgs e)
-        {
-            lblPrice.Text = "Pricea day:";
-        }
-
-        private void rdSell_CheckedChanged(object sender, EventArgs e)
-        {
-            lblPrice.Text = "Price:";
-        }
+       
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {

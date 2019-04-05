@@ -361,8 +361,6 @@ namespace AutoHouse
                 MessageBox.Show("You can't add autohouse", "AutoHouse", MessageBoxButtons.OK);
             }
 
-
-            
         }
 
         private void btnLogOut_Click(object sender, EventArgs e)

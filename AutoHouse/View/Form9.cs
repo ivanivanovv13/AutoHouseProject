@@ -347,7 +347,7 @@ namespace AutoHouse.View
             if(rdRent.Checked)
             {
                 lblPrice.Text = "Price a Day:";
-                lblPrice.Location=new Point(0, 180);
+                lblPrice.Location = new Point(0, 167);
             }
         }
 
@@ -356,7 +356,7 @@ namespace AutoHouse.View
             if (rdSell.Checked)
             {
                 lblPrice.Text = "Price :";
-                lblPrice.Location = new Point(55, 180);
+                lblPrice.Location = new Point(32, 167);
             }
         }
 

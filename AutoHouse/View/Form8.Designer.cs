@@ -57,7 +57,7 @@
             this.comboBoxAutoHouse.Name = "comboBoxAutoHouse";
             this.comboBoxAutoHouse.Size = new System.Drawing.Size(277, 21);
             this.comboBoxAutoHouse.TabIndex = 10;
-            this.comboBoxAutoHouse.Text = "Избери автокъща.";
+            this.comboBoxAutoHouse.Text = "Choose autohouse.";
             // 
             // btnPrintCars
             // 
@@ -105,10 +105,10 @@
             this.radioBtnRentaCars.Location = new System.Drawing.Point(533, 47);
             this.radioBtnRentaCars.Margin = new System.Windows.Forms.Padding(2);
             this.radioBtnRentaCars.Name = "radioBtnRentaCars";
-            this.radioBtnRentaCars.Size = new System.Drawing.Size(118, 30);
+            this.radioBtnRentaCars.Size = new System.Drawing.Size(108, 30);
             this.radioBtnRentaCars.TabIndex = 6;
             this.radioBtnRentaCars.TabStop = true;
-            this.radioBtnRentaCars.Text = "Renta cars ";
+            this.radioBtnRentaCars.Text = "Rent cars ";
             this.radioBtnRentaCars.UseVisualStyleBackColor = true;
             // 
             // btnDeleteSelectedCar

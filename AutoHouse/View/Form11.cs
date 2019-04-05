@@ -22,7 +22,7 @@ namespace AutoHouse.View
             this.users = users;
 
 
-            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
+            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=090801");
             try
             {
                 using (connection)
@@ -40,7 +40,7 @@ namespace AutoHouse.View
                         string adres = reader["adress"].ToString();
                         int idOwner = int.Parse(reader["id_owner"].ToString());
                         string town = reader["town"].ToString();
-                        MySqlConnection connectionCarForSell = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
+                        MySqlConnection connectionCarForSell = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=090801");
                         connectionCarForSell.Open();
                         using (connectionCarForSell)
                         {
@@ -70,7 +70,7 @@ namespace AutoHouse.View
                         }
 
 
-                        MySqlConnection connectionRentaCar = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
+                        MySqlConnection connectionRentaCar = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=090801");
                         connectionRentaCar.Open();
                         using (connectionRentaCar)
                         {
@@ -175,7 +175,7 @@ namespace AutoHouse.View
         {
             this.MaximizeBox = false;
 
-            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
+            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=090801");
             connection.Open();
             using (connection)
             {

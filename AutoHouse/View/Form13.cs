@@ -130,7 +130,7 @@ namespace AutoHouse.View
             }
 
 
-            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
+            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=090801");
             try
             {
                 using (connection)
@@ -225,5 +225,7 @@ namespace AutoHouse.View
             fm.Show();
             this.Hide();
         }
+
+        
     }
 }

@@ -28,7 +28,7 @@ namespace AutoHouse.View
         private void Form16_Load(object sender, EventArgs e)
         {
             this.MaximizeBox = false;
-            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
+            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=090801");
             try
             { 
                 connection.Open();
@@ -81,7 +81,7 @@ namespace AutoHouse.View
             try
             {
                 int index = listBoxUser.SelectedIndex;
-                MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
+                MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=090801");
                 MessageBox.Show(index.ToString());
                 MySqlCommand sqlcom = new MySqlCommand("DELETE FROM users_ah WHERE users_ah.id_users='"+users[index].Id +"';", connection);
                 MySqlDataReader MyReader2;

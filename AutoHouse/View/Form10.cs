@@ -37,7 +37,7 @@ namespace AutoHouse.View
             this.car = car;
             this.autoHouses = autoHouses;
             images.Add(car.Pic);
-            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
+            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=090801");
             using (connection)
             {
                 connection.Open();
@@ -148,7 +148,7 @@ namespace AutoHouse.View
             try
             {
                 int index = car.Id;
-                MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
+                MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=090801");
 
                 MySqlCommand sqlcom = new MySqlCommand("DELETE FROM carforsell WHERE carforsell.id_car = '" + index + "' LIMIT 1", connection);
                 MySqlDataReader MyReader2;
@@ -184,7 +184,7 @@ namespace AutoHouse.View
 
             try
             {
-                MySqlConnection connectionStatistic = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
+                MySqlConnection connectionStatistic = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=090801");
                 connectionStatistic.Open();
                 using (connectionStatistic)
                 {

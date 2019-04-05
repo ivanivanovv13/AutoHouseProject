@@ -83,7 +83,7 @@ namespace AutoHouse.View
 
         private void CantRenta()
         {
-            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
+            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=090801");
             try
             {
                 

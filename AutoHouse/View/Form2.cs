@@ -81,7 +81,7 @@ namespace AutoHouse
             {
                 using (connection)
                 {
-                    MySqlCommand sqlcom = new MySqlCommand("select autohouses.id,autohouses.name,autohouses.adress,autohouses.id_owner,autohouses.town from autohouses join users_ah on autohouses.id =users_ah.id_ah join users on users_ah.id_users = users.id where users.id = '" + users.Id + "' ;", connection);
+                    MySqlCommand sqlcom = new MySqlCommand("select autohouses.id,autohouses.name,autohouses.adress,autohouses.id_owner,autohouses.town from autohouses join users_ah on autohouses.id =users_ah.id_ah join users on users_ah.id_users = users.id where users.id = '" + users.Id + "' and autohouses.id_owner !='null';", connection);
                     connection.Open();
 
                     MySqlDataReader reader = sqlcom.ExecuteReader();

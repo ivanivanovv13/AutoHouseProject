@@ -54,9 +54,8 @@ namespace AutoHouse.View
             }
 
 
-
+           //Свързва се с базата данни
             MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
-
 
             try
             {
@@ -69,7 +68,7 @@ namespace AutoHouse.View
                         MySqlCommand sqlcom = new MySqlCommand("select users.user,autohouses.name ,cars.id,cars.model,cars.brand,cars.color,cars.year,cars.probeg,cars.image,statistic_sell.moneyForSell,statistic_sell.soldDate from statistic_sell join users on users.id=statistic_sell.id_user join cars on statistic_sell.id_car=cars.id join autohouses on autohouses.id=statistic_sell.id_AH where autohouses.id ='" + AutoHouse[i].Id + "';", connection);
                         
                         MySqlDataReader reader = sqlcom.ExecuteReader();
-
+                        //Извлича цялата статистика
                         while (reader.Read())
                         {
                             string username = reader["user"].ToString();

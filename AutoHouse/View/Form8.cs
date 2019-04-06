@@ -136,7 +136,7 @@ namespace AutoHouse.View
                         int index = listBoxCars.SelectedIndex;
                         if (index < 0)
 
-                         connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=09");
+                        connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
                         MySqlCommand sqlcom = new MySqlCommand("DELETE FROM rent_car WHERE rent_car.id_cars = '" + autoHouses[comboBoxAutoHouse.SelectedIndex].RentaCars[index].Id + "' LIMIT 1", connection);
                         MySqlDataReader MyReader2;
                         connection.Open();

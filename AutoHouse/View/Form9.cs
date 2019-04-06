@@ -17,7 +17,7 @@ namespace AutoHouse.View
     {
         bool flag = true, exep = false;
         int picnumber = 1, idAh, id;
-        string ahName,erroryear="",errormileage="",errorprice="";
+        string ahName,erroryear="";
         Car obj = new Car();
         Users user;
         List<AutoHouse> autoHouse;
@@ -270,7 +270,7 @@ namespace AutoHouse.View
 
             if (flag)
             {
-                MessageBox.Show("Please enter valid "+erroryear+" "+errorprice+" "+errormileage+"."); 
+                MessageBox.Show("Please enter valid "+erroryear + "."); 
             }
             else 
             {
@@ -393,9 +393,9 @@ namespace AutoHouse.View
         {
             if (System.Text.RegularExpressions.Regex.IsMatch(txtPrice.Text, "[^0-9]"))
             {
-                flag = true; errorprice = "price";
+                flag = true;
             }
-            if (txtMileage.Text == "") {flag = true; errorprice = "price"; }
+            if (txtMileage.Text == "") {flag = true; }
             else flag = false;
         }
 
@@ -403,9 +403,9 @@ namespace AutoHouse.View
         {
             if (System.Text.RegularExpressions.Regex.IsMatch(txtMileage.Text, "[^0-9]"))
             {
-                flag = true; errormileage = "mileage";
+                flag = true;
             }
-            if (txtMileage.Text == "") {flag = true; errormileage = "mileage"; }
+            if (txtMileage.Text == "") {flag = true;}
             else flag = false;
         }
 

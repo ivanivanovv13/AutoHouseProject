@@ -41,7 +41,7 @@ namespace AutoHouse
         public void IfOwner()
         {
 
-            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
+            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
 
            
 
@@ -81,7 +81,7 @@ namespace AutoHouse
         {
             autoHouse.Clear();
 
-            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
+            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
 
            
 
@@ -103,7 +103,7 @@ namespace AutoHouse
                         List<Car> carsForSell = new List<Car>();
                         List<Car> rentaCars = new List<Car>();
 
-                        MySqlConnection connectionCarForSell = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
+                        MySqlConnection connectionCarForSell = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
                 
 
                         connectionCarForSell.Open();
@@ -136,7 +136,7 @@ namespace AutoHouse
                         }
 
 
-                        MySqlConnection connectionRentaCar = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
+                        MySqlConnection connectionRentaCar = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
  
                         connectionRentaCar.Open();
                         using (connectionRentaCar)
@@ -187,7 +187,7 @@ namespace AutoHouse
         {
             int idUser=0;
 
-            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
+            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
 
            
 
@@ -227,7 +227,7 @@ namespace AutoHouse
         private void IfHeCanRentAndBuy()
         {
 
-            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
+            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
 
            
 
@@ -290,7 +290,7 @@ namespace AutoHouse
         private void label1_Click_1(object sender, EventArgs e)
         {
             bool flag = false;
-           MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
+           MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
 
            
 

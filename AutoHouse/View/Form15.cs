@@ -105,7 +105,7 @@ namespace AutoHouse.View
                     {
                         int index = listBoxCars.SelectedIndex;
 
-                        MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
+                        MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
 
                         
 
@@ -137,7 +137,7 @@ namespace AutoHouse.View
                         if (index < 0)
                             index = 0;
 
-                        MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
+                        MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
 
                         
 

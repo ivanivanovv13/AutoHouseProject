@@ -15,7 +15,7 @@ namespace AutoHouse.View
 {
     public partial class Form14 : Form
     {
-        MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
+        MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
         bool flag = true,exep=false;
         int picnumber = 1, idAh, id;
         string ahName;
@@ -70,7 +70,7 @@ namespace AutoHouse.View
         {
 
 
-            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
+            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
 
             
 
@@ -101,7 +101,7 @@ namespace AutoHouse.View
         {
 
 
-            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
+            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
 
             
 
@@ -130,7 +130,7 @@ namespace AutoHouse.View
         public void insertPic(Image pic)
         {
 
-            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
+            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
 
             
 
@@ -149,7 +149,7 @@ namespace AutoHouse.View
         {
 
 
-            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
+            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
 
             
 

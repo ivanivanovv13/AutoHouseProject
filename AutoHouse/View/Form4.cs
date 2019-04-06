@@ -142,6 +142,23 @@ namespace AutoHouse.View
                 }
                 n++;
             }
+            if (start >= autoHouses[curentAhID].CarsForSell.Count() - 5)
+            {
+                btnNextCars.Visible = false;
+            }
+            else
+            {
+                btnNextCars.Visible = true;
+            }
+            if (start == 0)
+            {
+                btnPreviousCars.Visible = false;
+            }
+            else
+            {
+                btnPreviousCars.Visible = true;
+            }
+
         }
 
         private void lblAH1_Click(object sender, EventArgs e)
@@ -149,6 +166,7 @@ namespace AutoHouse.View
             if (5 < autoHouses[startAH].CarsForSell.Count())
                 btnNextCars.Visible = true;
             curentAhID = startAH;
+            startCar = 0;
             displayCars(startCar, autoHouses[startAH]);
             
 
@@ -166,6 +184,7 @@ namespace AutoHouse.View
             if (5 < autoHouses[startAH+1].CarsForSell.Count())
                 btnNextCars.Visible = true;
             curentAhID = startAH+1;
+            startCar = 0;
             displayCars(startCar, autoHouses[startAH+1]);
         }
 
@@ -174,6 +193,7 @@ namespace AutoHouse.View
             if (5 < autoHouses[startAH+2].CarsForSell.Count())
                 btnNextCars.Visible = true;
             curentAhID = startAH+2;
+            startCar = 0;
             displayCars(startCar, autoHouses[startAH+2]);
         }
 
@@ -182,6 +202,7 @@ namespace AutoHouse.View
             if (5 < autoHouses[startAH+3].CarsForSell.Count())
                 btnNextCars.Visible = true;
             curentAhID = startAH+3;
+            startCar = 0;
             displayCars(startCar, autoHouses[startAH+3]);
         }
 
@@ -190,6 +211,7 @@ namespace AutoHouse.View
             if (5 < autoHouses[startAH+4].CarsForSell.Count())
                 btnNextCars.Visible = true;
             curentAhID = startAH+4;
+            startCar = 0;
             displayCars(startCar, autoHouses[startAH+4]);
         }
 

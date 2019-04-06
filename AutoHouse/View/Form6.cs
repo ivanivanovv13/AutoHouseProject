@@ -31,7 +31,7 @@ namespace AutoHouse
 
 
 
-            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
+            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
 
            
 
@@ -53,7 +53,7 @@ namespace AutoHouse
                         int idOwner = int.Parse(reader["id_owner"].ToString());
                         string town = reader["town"].ToString();
 
-                        MySqlConnection connectionCarForSell = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
+                        MySqlConnection connectionCarForSell = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
 
                      
 
@@ -87,7 +87,7 @@ namespace AutoHouse
 
 
 
-                        MySqlConnection connectionRentaCar = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
+                        MySqlConnection connectionRentaCar = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
 
                       
 

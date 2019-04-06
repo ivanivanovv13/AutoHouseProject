@@ -28,7 +28,7 @@ namespace AutoHouse.View
         private void Form16_Load(object sender, EventArgs e)
         {
             this.MaximizeBox = false;
-            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
+            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
 
              
 
@@ -85,7 +85,7 @@ namespace AutoHouse.View
             {
                 int index = listBoxUser.SelectedIndex;
 
-                MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
+                MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
 
                 MessageBox.Show(index.ToString());
 

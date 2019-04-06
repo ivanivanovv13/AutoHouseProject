@@ -77,14 +77,15 @@ namespace AutoHouse.View
             btnPreviousAH.Visible = false;
             btnNextCars.Visible = false;
             btnPreviousCars.Visible = false;
-
+            startCar = 0;
+            startAH = 0;
 
         }
 
         private void CantRenta()
         {
 
-            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
+            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
 
            
 
@@ -137,7 +138,15 @@ namespace AutoHouse.View
         private void displayCars(int start, AutoHouse autoHousesRenta)
         {
             int n = 0;
-            if(start==0)
+            if (start >= autoHouses[curentAhID].RentaCars.Count() - 5)
+            {
+                btnNextCars.Visible = false;
+            }
+            else
+            {
+                btnNextCars.Visible = true;
+            }
+            if (start == 0)
             {
                 btnPreviousCars.Visible = false;
             }
@@ -145,18 +154,14 @@ namespace AutoHouse.View
             {
                 btnPreviousCars.Visible = true;
             }
-            if (start+5 < autoHousesRenta.RentaCars.Count())
-            {
-                btnNextCars.Visible = true;
-            }
-            
+
             for (int i = start; i < start + 5; i++)
             {
                 if (i < autoHousesRenta.RentaCars.Count)
                 {
                     labelsCars[n].Visible = true;
                     pictureBoxesCars[n].Visible = true;
-                    labelsCars[n].Text = autoHousesRenta.RentaCars[i].Brand + " " + autoHousesRenta.RentaCars[i].Model + " " + autoHousesRenta.RentaCars[i].Color + " " + autoHousesRenta.RentaCars[i].Year + " " + autoHousesRenta.RentaCars[i].Probeg + " " + autoHousesRenta.RentaCars[i].Price;
+                    labelsCars[n].Text = autoHousesRenta.RentaCars[i].Brand + " " + autoHousesRenta.RentaCars[i].Model;
                     pictureBoxesCars[n].Image = autoHousesRenta.RentaCars[i].Pic;
                 }
                 else
@@ -248,7 +253,11 @@ namespace AutoHouse.View
 
         private void lblAH1_Click(object sender, EventArgs e)
         {
+            startCar = 0;
+            curentAhID = startAH;
             displayCars(startCar, autoHousesRenta[startAH]);
+            
+            
         }
 
         private void btnNextCars_Click(object sender, EventArgs e)
@@ -314,21 +323,30 @@ namespace AutoHouse.View
 
         private void lblAH2_Click(object sender, EventArgs e)
         {
+            startCar = 0;
+            curentAhID = startAH + 1;
             displayCars(startCar, autoHousesRenta[startAH+1]);
         }
 
         private void lblAH3_Click(object sender, EventArgs e)
         {
+            startCar = 0;
+            curentAhID = startAH + 2;
             displayCars(startCar, autoHousesRenta[startAH+2]);
+            
         }
 
         private void lblAH4_Click(object sender, EventArgs e)
         {
+            startCar = 0;
+            curentAhID = startAH + 3;
             displayCars(startCar, autoHousesRenta[startAH+3]);
         }
 
         private void lblAH5_Click(object sender, EventArgs e)
         {
+            startCar = 0;
+            curentAhID = startAH + 4;
             displayCars(startCar, autoHousesRenta[startAH+4]);
         }
 

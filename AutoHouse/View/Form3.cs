@@ -32,7 +32,7 @@ namespace AutoHouse.View
         {
             this.MaximizeBox = false;
 
-            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
+            MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
 
            
 
@@ -70,7 +70,7 @@ namespace AutoHouse.View
             {
                 int count = 0;
 
-                MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
+                MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
 
                
 
@@ -122,7 +122,7 @@ namespace AutoHouse.View
                         connection.Close();
 
 
-                        MySqlConnection connectionUserAH = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
+                        MySqlConnection connectionUserAH = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
 
                        
 

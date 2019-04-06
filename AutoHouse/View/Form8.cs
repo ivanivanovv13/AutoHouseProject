@@ -15,7 +15,7 @@ namespace AutoHouse.View
     {
         Users users;
         List<AutoHouse> autoHouses = new List<AutoHouse>();
-
+        MySqlConnection connection;
 
         public Form8(Users users,List<AutoHouse> autoHouses)
         {
@@ -104,7 +104,11 @@ namespace AutoHouse.View
                     try
                     {
                         int index = listBoxCars.SelectedIndex;
-                        MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
+
+                        MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=ivan1313");
+
+                        
+
 
                         MySqlCommand sqlcom = new MySqlCommand("DELETE FROM carforsell WHERE carforsell.id_car = '" + autoHouses[comboBoxAutoHouse.SelectedIndex].CarsForSell[index].Id + "' LIMIT 1", connection);
                         MySqlDataReader MyReader2;
@@ -131,8 +135,8 @@ namespace AutoHouse.View
                     {
                         int index = listBoxCars.SelectedIndex;
                         if (index < 0)
-                            index = 0;
-                        MySqlConnection connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=1234");
+
+                         connection = new MySqlConnection("datasource=localhost;database=autohouse;username=root;password=09");
                         MySqlCommand sqlcom = new MySqlCommand("DELETE FROM rent_car WHERE rent_car.id_cars = '" + autoHouses[comboBoxAutoHouse.SelectedIndex].RentaCars[index].Id + "' LIMIT 1", connection);
                         MySqlDataReader MyReader2;
                         connection.Open();
